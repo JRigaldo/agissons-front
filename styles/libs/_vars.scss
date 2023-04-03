@@ -1,7 +1,5 @@
 :root {
-  --theme-font-family: 'Poppins', 'Helvetica', 'Arial', sans-serif;
-  --custom-font: 'Barlow', 'Poppins', 'Helvetica', 'Arial', sans-serif ;
-  --custom-font-2: 'Oleo Script', cursive;
+  --theme-font-family: 'Lexend Deca', 'Helvetica', 'Arial', sans-serif;
   --font-size-body: 14px;
   --body-light: 300;
   --body-regular: 400;
@@ -9,7 +7,8 @@
   --body-bold: 700;
   --body-black: 900;
 
-  --theme-primary: #E83B4E;
+  --theme-primary: #1D71AE;
+  --theme-secondary: #CC2278;
 
   --theme-radius: 20px;
   --header-top: 50px;
@@ -28,7 +27,7 @@
   --gray-700: #495057;
   --gray-800: #343a40;
   --gray-900: #212529;
-  --primary: #0d6efd;
+  --primary: #1D71AE;
   --secondary: #6c757d;
   --success: #198754;
   --info: #0dcaf0;
