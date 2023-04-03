@@ -13,13 +13,13 @@ $custom-responsive: 555px !default;
   }
 }
 
-@mixin custom-responsive-up($custom-responsive: "") {
+@mixin custom-responsive-up($custom-responsive) {
   @media only screen and (min-width: #{$custom-responsive}) {
     @content;
   }
 }
 
-@mixin custom-responsive-down($custom-responsive: "") {
+@mixin custom-responsive-down($custom-responsive) {
   @media only screen and (max-width: #{$custom-responsive}) {
     @content;
   }

@@ -1,4 +1,4 @@
-.header{
+.header {
   z-index: 1000;
   position: fixed;
   height: var(--header-top);
@@ -7,65 +7,89 @@
   justify-content: space-between;
   align-items: center;
   @include shadow;
-  * > {
+
+  *> {
     height: 100%;
   }
 }
 
-.header__logo{
+.header__logo {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  img{
+
+  img {
     width: 100%;
     max-width: 170px;
   }
 }
 
-.header__logo--down{
+.header__logo--down {
   max-width: 150px;
 }
 
-.header__nav-links ul{
+.header__nav-links ul {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   flex-direction: row;
-  li{
+
+  li {
     position: relative;
-    padding: 5px 10px;
     margin: 0 10px;
-    a{
+
+    a {
       color: var(--black);
-      text-transform: uppercase;
-      font-weight: var(--body-bold);
+      font-weight: var(--body-normal);
       transition-duration: 0.3s;
-      &:hover{
-        color: var(--gray-dark);
+      background-color: var(--gray-100);
+      padding: 2px 10px;
+      border-radius: 20px;
+
+      &:hover {
+        background-color: var(--gray-300);
       }
-      &.active,
-      &.active:hover{
+
+      &.active {
+        background-color: var(--theme-primary);
+        color: white;
+      }
+    }
+  }
+
+  ul.links-user {
+    margin-left: 20px;
+    li {
+    margin: 0;
+    a{
+      background-color: transparent;
+      padding: 2px 10px;
+      border-radius: 0;
+      color: var(--black);
+      &:hover{
+        background-color: transparent;
+        color: var(--theme-primary);
+      }
+      &.active {
         color: var(--theme-primary);
       }
     }
-    &:before{
+
+    &:before {
       content: '';
       position: absolute;
       top: 50%;
-      transform: translateX(-24px) translateY(-50%);
+      transform: translateX(-2px) translateY(-50%);
       width: 5px;
       height: 5px;
       border-radius: 50%;
       background-color: var(--black);
     }
-    &:first-child:before,
-    &:last-child:before{
+
+    &:first-child:before{
       display: none;
     }
   }
-}
+  }
 
-.header__nav-links ul li a.link--logout{
-  font-weight: var(--body-regular);
 }
-

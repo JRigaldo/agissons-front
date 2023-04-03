@@ -4716,6 +4716,12 @@ button:focus {
   padding-right: 0;
   padding-left: 0; }
 
+@media only screen and (min-width: 1050px) {
+  .header--hidden-up {
+    display: none !important; } }
+@media only screen and (max-width: 1049px) {
+  .header--hidden-down {
+    display: none !important; } }
 @media only screen and (min-width: 854px) {
   .hidden-up {
     display: none !important; }
@@ -8610,31 +8616,44 @@ main {
   flex-direction: row; }
   .header__nav-links ul li {
     position: relative;
-    padding: 5px 10px;
     margin: 0 10px; }
     .header__nav-links ul li a {
       color: var(--black);
-      text-transform: uppercase;
-      font-weight: var(--body-bold);
-      transition-duration: 0.3s; }
+      font-weight: var(--body-normal);
+      transition-duration: 0.3s;
+      background-color: var(--gray-100);
+      padding: 2px 10px;
+      border-radius: 20px; }
       .header__nav-links ul li a:hover {
-        color: var(--gray-dark); }
-      .header__nav-links ul li a.active, .header__nav-links ul li a.active:hover {
-        color: var(--theme-primary); }
-    .header__nav-links ul li:before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      transform: translateX(-24px) translateY(-50%);
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      background-color: var(--black); }
-    .header__nav-links ul li:first-child:before, .header__nav-links ul li:last-child:before {
-      display: none; }
-
-.header__nav-links ul li a.link--logout {
-  font-weight: var(--body-regular); }
+        background-color: var(--gray-300); }
+      .header__nav-links ul li a.active {
+        background-color: var(--theme-primary);
+        color: white; }
+  .header__nav-links ul ul.links-user {
+    margin-left: 20px; }
+    .header__nav-links ul ul.links-user li {
+      margin: 0; }
+      .header__nav-links ul ul.links-user li a {
+        background-color: transparent;
+        padding: 2px 10px;
+        border-radius: 0;
+        color: var(--black); }
+        .header__nav-links ul ul.links-user li a:hover {
+          background-color: transparent;
+          color: var(--theme-primary); }
+        .header__nav-links ul ul.links-user li a.active {
+          color: var(--theme-primary); }
+      .header__nav-links ul ul.links-user li:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateX(-2px) translateY(-50%);
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: var(--black); }
+      .header__nav-links ul ul.links-user li:first-child:before {
+        display: none; }
 
 .splash {
   position: relative;
@@ -9375,7 +9394,7 @@ body.with-sidebar-links .mobile-menu-links {
   -moz-transform: translateX(-300px);
   transform: translateX(-300px); }
 
-/** ------- SITE COVER WHEN CLICKED ------- **/
+/** ------- WHEN CLICKED ------- **/
 body.with-sidebar-links {
   overflow-y: hidden; }
   body.with-sidebar-links .site-cover {
@@ -9388,7 +9407,17 @@ body.with-sidebar-links {
     left: 0;
     z-index: 99; }
 
-/** ------- OUSIDE MOBILE NAV ------- **/
+body header.header .navbar-toggle {
+  display: block; }
+body header.header .exit-menu {
+  display: none; }
+
+body.with-sidebar-links header.header .navbar-toggle {
+  display: none; }
+body.with-sidebar-links header.header .exit-menu {
+  display: block; }
+
+/** ------- OUTSIDE MOBILE NAV ------- **/
 aside.mobile-menu.mobile-menu--right {
   right: calc(-1 * 300px); }
 
@@ -9411,27 +9440,6 @@ aside.mobile-menu {
   height: 100%; }
 
 /** ------- LINK LAYOUT ------- **/
-.exit-menu {
-  display: block;
-  float: right;
-  width: calc(var(--header-top) / 2);
-  height: calc(var(--header-top) / 2);
-  position: relative;
-  margin-top: calc(var(--header-top) / 4);
-  margin-right: calc(var(--header-top) / 4); }
-  .exit-menu svg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    -o-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-    width: calc(var(--header-top) / 2);
-    height: calc(var(--header-top) / 2);
-    fill: var(--black); }
-
 nav.mobile-menu--text {
   padding-top: calc(var(--header-top) * 2); }
   nav.mobile-menu--text ul {
@@ -9458,13 +9466,11 @@ nav.mobile-menu--text {
         background-color: var(--gray-200);
         border-radius: 5px; }
         nav.mobile-menu--text ul li a:hover {
-          background-color: var(--theme-primary);
+          background-color: var(--gray-dark);
           color: var(--white); }
         nav.mobile-menu--text ul li a.active {
-          background-color: var(--gray);
+          background-color: var(--theme-primary);
           color: var(--white); }
-      nav.mobile-menu--text ul li:last-child a {
-        background-color: initial; }
 
 footer nav.social--row-icon {
   padding: 0; }
@@ -10032,10 +10038,10 @@ div.swiper-button-next {
   right: calc((100vw - 69rem) / 2); }
 
 .navbar-toggle {
+  position: relative;
   display: inline-block;
   width: calc(var(--header-top) / 1.5);
   height: calc(var(--header-top) / 1.5);
-  position: relative;
   margin: 0 10px;
   border-radius: 5px;
   transition-duration: 0.3s; }
@@ -10057,6 +10063,24 @@ div.swiper-button-next {
     background-color: var(--theme-primary); }
     .navbar-toggle:hover svg {
       fill: var(--white); }
+
+.exit-menu {
+  position: relative;
+  width: calc(var(--header-top) / 2);
+  height: calc(var(--header-top) / 2);
+  margin: 0 10px; }
+  .exit-menu svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    width: calc(var(--header-top) / 2);
+    height: calc(var(--header-top) / 2);
+    fill: var(--black); }
 
 .social-icons {
   position: relative;

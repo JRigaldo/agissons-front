@@ -5,7 +5,7 @@ body.with-sidebar-links .mobile-menu-links {
   @include transform(translateX($responsive-menu-width * -1));
 }
 
-/** ------- SITE COVER WHEN CLICKED ------- **/
+/** ------- WHEN CLICKED ------- **/
 body.with-sidebar-links {
   overflow-y: hidden;
 
@@ -21,7 +21,29 @@ body.with-sidebar-links {
   }
 }
 
-/** ------- OUSIDE MOBILE NAV ------- **/
+body header.header {
+  .navbar-toggle {
+    display: block;
+  }
+
+  .exit-menu {
+    display: none;
+  }
+}
+
+
+body.with-sidebar-links header.header {
+  .navbar-toggle {
+    display: none;
+  }
+
+  .exit-menu {
+    display: block;
+  }
+}
+
+
+/** ------- OUTSIDE MOBILE NAV ------- **/
 aside.mobile-menu.mobile-menu--right {
   right: calc(-1 * #{$responsive-menu-width});
 }
@@ -47,26 +69,6 @@ aside.mobile-menu {
 }
 
 /** ------- LINK LAYOUT ------- **/
-.exit-menu {
-  display: block;
-  float: right;
-  width: calc(var(--header-top) / 2);
-  height: calc(var(--header-top) / 2);
-  position: relative;
-  margin-top: calc(var(--header-top) / 4);
-  margin-right: calc(var(--header-top) / 4);
-
-  svg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    @include transform(translateX(-50%) translateY(-50%));
-    width: calc(var(--header-top) / 2);
-    height: calc(var(--header-top) / 2);
-    fill: var(--black);
-  }
-}
-
 nav.mobile-menu--text {
   padding-top: calc(var(--header-top) * 2);
 
@@ -95,17 +97,16 @@ nav.mobile-menu--text {
         color: var(--black);
         background-color: var(--gray-200);
         border-radius: 5px;
+
         &:hover {
+          background-color: var(--gray-dark);
+          color: var(--white);
+        }
+
+        &.active {
           background-color: var(--theme-primary);
           color: var(--white);
         }
-        &.active{
-          background-color: var(--gray);
-          color: var(--white);
-        }
-      }
-      &:last-child a{
-        background-color: initial;
       }
     }
   }

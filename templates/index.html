@@ -17,32 +17,43 @@
 
 <body>
     <header class="header">
-        <a href="#" class="header__logo header__logo--up ml-10 hidden-down"><img
-                src="../images/logo-iceRollDelice-inline.png" alt="logo iceroll delice"></a>
-        <a href="#" class="header__logo header__logo--down hidden-up"><img src="../images/logo-iceRollDelice-inline.png"
-                alt="logo iceroll delice"></a>
-        <nav class="header__nav-links hidden-down">
+        <a href="#" class="header__logo header__logo--up ml-10 header--hidden-down"><img
+                src="../images/logo-header-agissons.png" alt="logo association Agissons !"></a>
+        <a href="#" class="header__logo header__logo--down header--hidden-up"><img
+                src="../images/logo-header-agissons.png" alt="logo association Agissons !"></a>
+        <nav class="header__nav-links header--hidden-down">
             <ul>
                 <li><a href="#" class="active">Accueil</a></li>
-                <li><a href="#">Événement</a></li>
-                <li><a href="#">Carte & Prix</a></li>
-                <li><a href="#">Le concept</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#">Nos initiatives</a></li>
+                <li><a href="#">Qui sommes-nous ?</a></li>
+                <li><a href="#">Faire un don</a></li>
+                <li><a href="#">S'engager</a></li>
+                <ul class="links-user">
+                    <li><a href="#">S'inscrire</a></li>
+                    <li><a href="#">Connexion</a></li>
+                </ul>
             </ul>
         </nav>
-        <div class="navbar--groupe hidden-up">
-            <a class="navbar-toggle" href="#" id="header-icon-links">
-                <svg height="21.667" id="menu" viewBox="0 0 30 21.667" width="30" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M28.75,125.305H1.25a1.321,1.321,0,0,1,0-2.637h27.5a1.321,1.321,0,0,1,0,2.637Zm0,0"
-                        data-name="Tracé 1" id="Tracé_1" transform="translate(0 -113.153)" />
-                    <path
-                        d="M28.75,2.637H1.25A1.286,1.286,0,0,1,0,1.319,1.286,1.286,0,0,1,1.25,0h27.5A1.286,1.286,0,0,1,30,1.319,1.286,1.286,0,0,1,28.75,2.637Zm0,0"
-                        data-name="Tracé 2" id="Tracé_2" />
-                    <path d="M28.75,247.969H1.25a1.321,1.321,0,0,1,0-2.637h27.5a1.321,1.321,0,0,1,0,2.637Zm0,0"
-                        data-name="Tracé 3" id="Tracé_3" transform="translate(0 -226.303)" />
-                </svg>
-            </a>
-        </div>
+        <button class="navbar-toggle header--hidden-up" id="header-icon-links">
+            <svg class="menu-button" height="21.667" id="menu" viewBox="0 0 30 21.667" width="30"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M28.75,125.305H1.25a1.321,1.321,0,0,1,0-2.637h27.5a1.321,1.321,0,0,1,0,2.637Zm0,0"
+                    data-name="Tracé 1" id="Tracé_1" transform="translate(0 -113.153)" />
+                <path
+                    d="M28.75,2.637H1.25A1.286,1.286,0,0,1,0,1.319,1.286,1.286,0,0,1,1.25,0h27.5A1.286,1.286,0,0,1,30,1.319,1.286,1.286,0,0,1,28.75,2.637Zm0,0"
+                    data-name="Tracé 2" id="Tracé_2" />
+                <path d="M28.75,247.969H1.25a1.321,1.321,0,0,1,0-2.637h27.5a1.321,1.321,0,0,1,0,2.637Zm0,0"
+                    data-name="Tracé 3" id="Tracé_3" transform="translate(0 -226.303)" />
+            </svg>
+        </button>
+        <button class="exit-menu header--hidden-up" id="exit-menu-links">
+            <svg class="close-button" xmlns="http://www.w3.org/2000/svg" width="29.375" height="29.375"
+                viewBox="0 0 29.375 29.375">
+                <path id="close_FILL0_wght400_GRAD0_opsz48_2_" data-name="close_FILL0_wght400_GRAD0_opsz48 (2)"
+                    d="M209.26,332.375l-2.26-2.26,12.428-12.428L207,305.26l2.26-2.26,12.428,12.428L234.115,303l2.26,2.26-12.428,12.428,12.428,12.428-2.26,2.26-12.428-12.428Z"
+                    transform="translate(-207 -303)" />
+            </svg>
+        </button>
     </header>
     <!-- MOBILE NAVIGATION MENU -->
     <aside class="mobile-menu mobile-menu--right mobile-menu-links clearfix">
@@ -57,10 +68,14 @@
             <nav class="mobile-menu--text">
                 <ul>
                     <li><a href="#" class="active">Accueil</a></li>
-                    <li><a href="#">Événement</a></li>
-                    <li><a href="#">Carte & Prix</a></li>
-                    <li><a href="#">Le concept</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Nos initiatives</a></li>
+                    <li><a href="#">Qui sommes-nous ?</a></li>
+                    <li><a href="#">Faire un don</a></li>
+                    <li><a href="#">S'engager</a></li>
+                    <ul class="links-user">
+                        <li><a href="#">S'inscrire</a></li>
+                        <li><a href="#">Connexion</a></li>
+                    </ul>
                 </ul>
             </nav>
             <nav class="social--row-icon">

@@ -52,6 +52,18 @@
   }
 }
 
+@include custom-responsive-up(1050px){
+  .header--hidden-up {
+    display: none !important;
+  }
+}
+
+@include custom-responsive-down(1049px){
+  .header--hidden-down {
+    display: none !important;
+  }
+}
+
 
 @include medium-up {
   .hidden-up {
