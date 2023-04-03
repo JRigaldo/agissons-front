@@ -1,0 +1,54 @@
+.aside-nav {
+  position: fixed;
+  height: 100%;
+  background-color: var(--gray-200);
+  width: 200px;
+}
+
+.aside-nav nav {
+  top: var(--header-top);
+}
+
+.aside-nav ul li {
+  border-bottom: 1px solid var(--gray-300);
+
+  a {
+    padding: 1rem 0;
+    color: var(--gray-dark);
+    font-size: 0.9rem;
+    transition-duration: 0.3s;
+    padding-left: 15px;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-color: var(--gray-300);
+      svg path{
+        fill: var(--theme-primary);
+      }
+    }
+    &.active{
+      color: var(--theme-primary);
+      font-weight: var(--body-bold);
+      svg path{
+        fill: var(--theme-primary);
+      }
+    }
+
+    svg{
+      width: 45px;
+    }
+
+    svg path{
+      transition-duration: .3s;
+      fill: var(--gray-dark);
+    }
+  }
+}
+
+@include medium-down{
+  aside.aside-nav{
+    display: none;
+  }
+}
+

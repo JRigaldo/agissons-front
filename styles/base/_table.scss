@@ -1,0 +1,32 @@
+.table{
+  display: table;
+}
+
+div.table > :not(caption) > * > *{
+  padding: 5px;
+}
+
+.table .table-tr{
+  display: table-row;
+}
+
+.table form.table-tr{
+  background-color: var(--add-new);
+}
+
+.table .table-td,
+.table .table-th{
+  display: table-cell;
+  padding: 5px;
+  border-bottom: solid 1px #000;
+}
+
+.table form.table-tr .table-td,
+.table form.table-tr .table-th{
+  padding: 0;
+}
+
+.table form.table-tr .table-td .field{
+  height: auto;
+  margin: 0;
+}
