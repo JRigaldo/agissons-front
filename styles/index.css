@@ -8472,6 +8472,13 @@ header {
 main {
   margin-top: var(--header-top); }
 
+.wrapper {
+  display: grid;
+  grid-template-columns: 200px calc(100% - 200px); }
+
+aside {
+  grid-column: 1; }
+
 .header {
   z-index: 1000;
   position: fixed;
