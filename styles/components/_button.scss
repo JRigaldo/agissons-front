@@ -3,26 +3,23 @@
   letter-spacing: 1px;
   transition-duration: 300ms;
   -webkit-transition-duration: 300ms;
-  width: 100%;
   font-size: 0.9rem;
-  border-radius: 5px;
+  border-radius: 30px;
   margin: 10px auto;
   font-weight: var(--body-bold);
 }
 
 .btn-primary {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: var(--theme-primary);
   color: var(--white);
-  border: 1px solid var(--white);
   cursor: pointer;
   text-transform: uppercase;
   font-family: var(--custom-font);
   min-width: 200px;
-  padding: 1.5rem;
+  padding: 10px 15px;
   &:hover {
-    background-color: var(--white);
-    color: var(--theme-primary);
-    border: 1px solid var(--theme-primary);
+    background-color: var(--gray-800);
+    color: var(--white);
   }
 }
 

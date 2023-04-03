@@ -7,6 +7,10 @@
   height: 100%;
 }
 
+.container--large {
+  max-width: 80rem;
+}
+
 .row-center {
   display: flex;
   display: -webkit-box;
@@ -111,12 +115,10 @@ $columns: 12;
   @include medium-down {
     .col-#{$i} {
       flex: 0 0 100% / $columns * $i;
-      /*
       & > * {
         padding: 0;
         margin: 0;
       }
-      */
     }
     .col-offset-#{$i} {
       margin-left: 100% / $columns * $i;
