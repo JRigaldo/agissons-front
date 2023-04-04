@@ -99,6 +99,24 @@ picture.picture__inter {
     margin-right: 200px;
   }
 }
+  $badges: (
+    primary: #1D71AE,
+    secondary: #CC2278,
+    tertiary: #1E9F18,
+    quaternary: #F47B02,
+    quinary: #A22DB7,
+    senary: #02A0F4,
+    septenary: #D91A4E
+  );
+
+@each $name, $color in $badges {
+  .badge--#{$name} {
+    .card__default-icon,
+    .card__default-footer button{
+      background-color: $color;
+    }
+  }
+}
 
 .card__default-icon {
   position: absolute;
@@ -109,7 +127,6 @@ picture.picture__inter {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: var(--theme-primary);
   @include flex-center;
 
   svg {

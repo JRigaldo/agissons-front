@@ -8461,16 +8461,17 @@ h1 {
   line-height: 3.7rem; }
 
 h2 {
-  font-size: 3rem;
+  font-size: 2.3rem;
+  line-height: 2.8rem;
   font-weight: var(--body-black);
   letter-spacing: 1px;
   color: var(--theme-primary); }
 
 h3 {
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   font-weight: var(--body-bold);
   letter-spacing: 1px;
-  line-height: 2.1rem;
+  line-height: 1.9rem;
   color: var(--gray-dark); }
 
 h4 {
@@ -8650,6 +8651,34 @@ picture.picture__inter {
   .card__default:last-child {
     margin-right: 200px; }
 
+.badge--primary .card__default-icon,
+.badge--primary .card__default-footer button {
+  background-color: #1D71AE; }
+
+.badge--secondary .card__default-icon,
+.badge--secondary .card__default-footer button {
+  background-color: #CC2278; }
+
+.badge--tertiary .card__default-icon,
+.badge--tertiary .card__default-footer button {
+  background-color: #1E9F18; }
+
+.badge--quaternary .card__default-icon,
+.badge--quaternary .card__default-footer button {
+  background-color: #F47B02; }
+
+.badge--quinary .card__default-icon,
+.badge--quinary .card__default-footer button {
+  background-color: #A22DB7; }
+
+.badge--senary .card__default-icon,
+.badge--senary .card__default-footer button {
+  background-color: #02A0F4; }
+
+.badge--septenary .card__default-icon,
+.badge--septenary .card__default-footer button {
+  background-color: #D91A4E; }
+
 .card__default-icon {
   position: absolute;
   top: -25px;
@@ -8659,7 +8688,6 @@ picture.picture__inter {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: var(--theme-primary);
   display: flex;
   display: -webkit-box;
   display: -moz-box;
@@ -8854,7 +8882,7 @@ nav.mobile-menu--text {
           color: var(--white); }
 
 footer.footer {
-  background-color: var(--gray-300); }
+  background-color: var(--gray-200); }
 
 footer nav.social--row-icon {
   padding: 0; }
