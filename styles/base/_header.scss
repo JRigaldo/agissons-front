@@ -1,6 +1,7 @@
 .header {
   z-index: 1000;
   position: fixed;
+  top: 0;
   height: var(--header-top);
   display: flex;
   flex-direction: row;

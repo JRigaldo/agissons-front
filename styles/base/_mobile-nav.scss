@@ -10,20 +10,20 @@ body.with-sidebar-links {
   overflow-y: hidden;
 
   .site-cover {
-    background-color: var(--white);
+    background-color: var(--black);
     opacity: 0.3;
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 99;
+    z-index: 998;
   }
 }
 
 body header.header {
   .navbar-toggle {
-    display: block;
+    display: inline-block;
   }
 
   .exit-menu {
@@ -38,7 +38,7 @@ body.with-sidebar-links header.header {
   }
 
   .exit-menu {
-    display: block;
+    display: inline-block;
   }
 }
 
@@ -52,12 +52,12 @@ aside.mobile-menu {
   position: fixed;
   width: $responsive-menu-width;
   height: 100%;
-  top: 0;
+  top: var(--header-top);
   bottom: 0;
   background-color: var(--white);
   transition-duration: 300ms;
   -webkit-transition-duration: 300ms;
-  z-index: 100;
+  z-index: 999;
   overflow-y: scroll;
 }
 
@@ -70,7 +70,7 @@ aside.mobile-menu {
 
 /** ------- LINK LAYOUT ------- **/
 nav.mobile-menu--text {
-  padding-top: calc(var(--header-top) * 2);
+  padding-top: 10px;
 
   ul {
     display: flex;

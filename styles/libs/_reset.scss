@@ -93,9 +93,13 @@ a {
 html,
 body {
   position: relative;
-  min-height: 100%;
   max-width: 100%;
-  overflow-x: hidden;
+  height: 100%;
+}
+
+body{
+  overflow-y: scroll;
+  min-height: auto;
 }
 
 main{

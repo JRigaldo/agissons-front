@@ -1,10 +1,11 @@
-.section--heading{
+.heading{
   position: relative;
   height: 90vh;
   width: 100%;
+  margin-bottom: 30px;
 }
 
-.section--heading .background-image{
+.heading .background-image{
   position: absolute;
   top: 0;
   left: 50%;
@@ -27,7 +28,7 @@
   }
 }
 
-.section--heading h1,
-.section--heading h2{
+.heading h1,
+.heading h2{
   color: var(--white);
 }

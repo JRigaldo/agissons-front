@@ -3,7 +3,6 @@ body {
   background-color: var(--white);
   font-size: var(--font-size-body);
   color: var(--black);
-  overflow: hidden;
 }
 
 h1 {
@@ -39,24 +38,30 @@ li {
   line-height: 1.6rem;
 }
 
-header{
+header {
   width: 100%;
   background-color: var(--white);
 }
 
-header{
+header {
   z-index: 100;
 }
 
-main{
+header.heading {
   margin-top: var(--header-top);
 }
 
-.wrapper{
+.wrapper {
   display: grid;
-  grid-template-columns: 200px calc(100% - 200px);
+  grid-template-columns: 250px minmax(10px, 1fr);
+  grid-gap: 1rem;
 }
 
-aside{
-  grid-column: 1;
+aside.sticky {
+  position: sticky;
+  top: var(--header-top);
+  align-self: start;
+  padding: 10px;
+  height: 100vh;
+    overflow-y: scroll;
 }
