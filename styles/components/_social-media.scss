@@ -45,7 +45,7 @@
       margin: 0.3rem auto;
 
       a {
-        @include icon;
+        @include icon();
       }
     }
   }

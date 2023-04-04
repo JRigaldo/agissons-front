@@ -101,7 +101,7 @@ $custom-responsive: 555px !default;
   }
 }
 
-@mixin icon($width-a: 30px, $height-a: 30px, $width-icon: 20px, $height-icon: 20px, $color-icon: var(--white), $color-hover: var(--theme-primary)) {
+@mixin icon($width-a: 30px, $height-a: 30px, $width-icon: 20px, $height-icon: 20px, $color-icon: var(--gray-dark), $color-hover: var(--theme-primary)) {
   position: relative;
   display: block;
   width: $width-a;

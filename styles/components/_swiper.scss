@@ -1,33 +1,7 @@
-@include medium-down{
-  div.swiper__container{
-    margin-left: 0.5rem;
-  }
-  .swiper__container div.swiper-button-next{
-    right: 20px;
-  }
-  div.shadow-overflow{
-    right: 0;
-  }
-}
-
-@include custom-responsive-down(1100px){
-  div.swiper__container{
-    margin-left: 0.5rem;
-  }
-  .swiper__container div.swiper-button-next{
-    right: 20px;
-  }
-  div.shadow-overflow{
-    right: 0;
-  }
-}
-
-
-.swiper__container{
+.swiper-container{
   position: relative;
   width: 100%;
   overflow: hidden;
-  //margin-left: calc((100vw - 70rem) / 2);
 }
 
 .swiper-l {
@@ -56,22 +30,13 @@
   align-items: center;
 }
 
-.shadow-overflow{
-  z-index: 10;
-  position: absolute;
-  right: calc((100vw - 70rem) / 2);
-  top: 50%;
-  transform: translateX(50px) translateY(-50%);
-  width: 200px;
-  height: 100%;
-  content: '';
-  display: block;
-  background: rgb(0,0,0);
-  background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 65%, rgba(0,0,0,1) 100%);
-}
 
 div.swiper-button-next{
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  transform: translateY(-50%);
   z-index: 100;
-  color: var(--white);
-  right: calc((100vw - 69rem) / 2);
+  color: var(--theme-primary);
+  
 }

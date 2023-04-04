@@ -1,11 +1,11 @@
-.heading{
+.heading {
   position: relative;
   height: 90vh;
   width: 100%;
   margin-bottom: 30px;
 }
 
-.heading .background-image{
+.heading .background-image {
   position: absolute;
   top: 0;
   left: 50%;
@@ -29,6 +29,143 @@
 }
 
 .heading h1,
-.heading h2{
+.heading h2 {
   color: var(--white);
+}
+
+/**----------- figure -----------**/
+picture.picture__inter {
+  position: relative;
+
+  &:hover {
+    a button.btn {
+      background-color: var(--theme-primary);
+      color: var(--white);
+    }
+  }
+}
+
+/**----------- figure -----------**/
+
+.scrolling-wrapper-flexbox {
+  display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  // padding: 2rem 0 4rem 0;
+
+  /* width */
+  &::-webkit-scrollbar {
+    height: 5px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #fafafa;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #ededed;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #ededed;
+  }
+}
+
+.card__default {
+  position: relative;
+  flex: 0 0 auto;
+  @extend %shadow;
+  @extend %border-radius;
+  cursor: pointer;
+  margin: 2rem;
+  max-width: 250px;
+
+  &:hover {
+    @extend %shadow-hover;
+  }
+
+  &:first-child {
+    margin-left: 10px;
+  }
+
+  &:last-child {
+    margin-right: 200px;
+  }
+}
+
+.card__default-icon {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--theme-primary);
+  @include flex-center;
+
+  svg {
+    width: 30px;
+
+    path {
+      fill: var(--white);
+    }
+  }
+}
+
+.card__default-content {
+  padding: 2rem;
+  min-height: 250px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  .card__default-time{
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+    color: var(--gray-600);
+    font-weight: var(--body-bold);
+  }
+  h5{
+    font-size: 2rem;
+    padding: 0 1rem;
+    color: var(--gray-dark);
+    font-weight: var(--body-bold);
+  }
+}
+
+.card__default-footer {
+  position: relative;
+  background-color: var(--agenda-footer);
+  padding: 2rem;
+
+  p {
+    text-align: center;
+    color: var(--gray-dark);
+    font-weight: var(--body-bold);
+    color: var(--gray-600);
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+  }
+
+  button {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--theme-primary);
+    border-radius: 30px;
+    color: var(--white);
+    padding: 10px 15px;
+    font-size: 1rem;
+  }
 }
