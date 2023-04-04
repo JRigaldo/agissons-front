@@ -1,0 +1,37 @@
+.card__basic{
+    @include shadow-light;
+    border-radius: 5px;
+    padding: 20px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition-duration: .3s;
+}
+
+.card__basic:hover{
+    background-color: var(--theme-primary);
+    h4, p{
+        color: var(--white);
+    }
+    button.btn-primary{
+        background-color: var(--white);
+        color: var(--theme-primary);
+        svg path{
+            fill: var(--theme-primary);
+        }
+    }
+}
+
+.card__basic--content {
+    h4{
+        color: var(--theme-primary);
+    }
+}
+
+.card__basic{
+    button span,
+    button svg{
+        margin: 0 2px;
+    }
+}

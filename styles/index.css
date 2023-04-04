@@ -8438,20 +8438,22 @@ body {
 
 h1 {
   font-size: 3.4rem;
-  font-weight: var(--body-bold);
+  font-weight: var(--body-black);
   letter-spacing: 1px;
   line-height: 3.7rem; }
 
 h2 {
-  font-size: 2.7rem;
-  font-weight: var(--body-bold);
-  letter-spacing: 1px; }
+  font-size: 3rem;
+  font-weight: var(--body-black);
+  letter-spacing: 1px;
+  color: var(--theme-primary); }
 
 h3 {
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: var(--body-bold);
   letter-spacing: 1px;
-  line-height: 3rem; }
+  line-height: 2.1rem;
+  color: var(--gray-dark); }
 
 h4 {
   font-size: 1.5rem;
@@ -8481,6 +8483,7 @@ header.heading {
 
 aside.sticky {
   position: sticky;
+  grid-column: 1;
   top: var(--header-top);
   align-self: start;
   padding: 10px;
@@ -8982,7 +8985,14 @@ footer nav.social--row-icon {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
-  display: -webkit-flex; }
+  display: -webkit-flex;
+  letter-spacing: 1px;
+  transition-duration: 300ms;
+  -webkit-transition-duration: 300ms;
+  font-size: 0.9rem;
+  border-radius: 30px;
+  margin: 10px auto;
+  font-weight: var(--body-bold); }
 
 .center-center {
   display: flex;
@@ -9051,6 +9061,34 @@ footer nav.social--row-icon {
     fill: var(--black); }
   100% {
     fill: var(--theme-primary); } }
+.card__basic {
+  -webkit-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  padding: 20px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition-duration: .3s; }
+
+.card__basic:hover {
+  background-color: var(--theme-primary); }
+  .card__basic:hover h4, .card__basic:hover p {
+    color: var(--white); }
+  .card__basic:hover button.btn-primary {
+    background-color: var(--white);
+    color: var(--theme-primary); }
+    .card__basic:hover button.btn-primary svg path {
+      fill: var(--theme-primary); }
+
+.card__basic--content h4 {
+  color: var(--theme-primary); }
+
+.card__basic button span,
+.card__basic button svg {
+  margin: 0 2px; }
+
 .modal-box {
   background-color: rgba(0, 0, 0, 0.2);
   position: fixed;
@@ -9242,8 +9280,7 @@ footer nav.social--row-icon {
 .swiper__container {
   position: relative;
   width: 100%;
-  overflow: hidden;
-  margin-left: calc((100vw - 70rem) / 2); }
+  overflow: hidden; }
 
 .swiper-l {
   position: relative;

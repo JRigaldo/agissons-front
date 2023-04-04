@@ -98,6 +98,14 @@
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
+
+  letter-spacing: 1px;
+  transition-duration: 300ms;
+  -webkit-transition-duration: 300ms;
+  font-size: 0.9rem;
+  border-radius: 30px;
+  margin: 10px auto;
+  font-weight: var(--body-bold);
 }
 
 .center-center {
