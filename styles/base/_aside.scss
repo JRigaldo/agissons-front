@@ -42,10 +42,13 @@ nav.aside-social {
 
         svg {
             width: 25px;
+            path{
+                fill: var(--gray-dark);
+            }
         }
 
         &:hover svg path {
-            fill: var(--gray-dark);
+            fill: var(--theme-primary);
         }
     }
 }

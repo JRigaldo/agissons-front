@@ -1,22 +1,78 @@
-header {
-    h1{
-        font-size: 1.5rem;
-        line-height: 1.9rem;
-    }
-    h3{
-        font-size: 1.1rem;
-        line-height: 1.3rem;
-    }
-    &.heading {
-        height: auto;
-        .background-image:after{
-            background: rgba(0, 0, 0, 0.7);
+@include medium-down {
+    body {
+        header.heading {
+            h1 {
+                font-size: 1.5rem;
+                line-height: 1.9rem;
+            }
+
+            h3 {
+                font-size: 1.1rem;
+                line-height: 1.3rem;
+            }
+        }
+
+        header.form-container h4 {
+            font-size: 0.84rem;
+        }
+
+        picture.picture__inter {
+            h3 {
+                font-weight: var(--body-bold);
+                font-size: 1.3rem;
+                line-height: 1.5rem;
+            }
+
+            h4 {
+                font-size: 1rem;
+                line-height: 1.2rem;
+            }
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            line-height: 2.1rem;
+        }
+
+        h3 {
+            font-size: 1rem;
+            line-height: 1.2rem;
+            font-weight: var(--body-regular);
         }
     }
-    .container{
-        width: 100%;
+
+    header {
+        &.heading {
+            height: auto;
+
+            .background-image:after {
+                background: rgba(0, 0, 0, 0.7);
+            }
+        }
+
+        .container {
+            width: 100%;
+        }
     }
-    .form-container h4{
-        font-size: 0.84rem;
+
+    div.wrapper {
+        display: block;
+
+        aside.sticky {
+            display: none;
+        }
+    }
+
+    picture.picture__inter {
+        img {
+            height: 80vh;
+            max-height: 548px;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    div.card__agenda {
+        margin: 2rem 0.5rem;
     }
 }
