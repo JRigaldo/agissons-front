@@ -1,46 +1,56 @@
-.card__basic{
-    @include shadow-light;
-    border-radius: 5px;
-    padding: 20px;
-    min-height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition-duration: .3s;
-    button.btn-primary svg{
-        width: 20px;
-        path{
-            transition-duration: .3s;
-        }
+/**************   card initiaive   ****************/
+.card__basic {
+  @include shadow-light;
+  border-radius: 5px;
+  padding: 20px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition-duration: .3s;
+
+  button.btn-primary svg {
+    width: 20px;
+
+    path {
+      transition-duration: .3s;
     }
+  }
 }
 
-.card__basic:hover{
-    background-color: var(--theme-primary);
-    h4, p{
-        color: var(--white);
+.card__basic:hover {
+  background-color: var(--theme-primary);
+
+  h4,
+  p {
+    color: var(--white);
+  }
+
+  button.btn-primary {
+    background-color: var(--white);
+    color: var(--theme-primary);
+
+    svg path {
+      fill: var(--theme-primary);
     }
-    button.btn-primary{
-        background-color: var(--white);
-        color: var(--theme-primary);
-        svg path{
-            fill: var(--theme-primary);
-        }
-    }
+  }
 }
 
 .card__basic--content {
-    h4{
-        color: var(--theme-primary);
-    }
+  h4 {
+    color: var(--theme-primary);
+  }
 }
 
-.card__basic{
-    button span,
-    button svg{
-        margin: 0 2px;
-    }
+.card__basic {
+
+  button span,
+  button svg {
+    margin: 0 2px;
+  }
 }
+
+/**************   card agenda   ****************/
 
 .card__agenda {
   position: relative;
@@ -63,20 +73,21 @@
     margin-right: 200px;
   }
 }
-  $badges: (
-    primary: #1D71AE,
-    secondary: #CC2278,
-    tertiary: #1E9F18,
-    quaternary: #F47B02,
-    quinary: #A22DB7,
-    senary: #02A0F4,
-    septenary: #D91A4E
-  );
 
-@each $name, $color in $badges {
+$badges: (primary: #1D71AE,
+  secondary: #CC2278,
+  tertiary: #1E9F18,
+  quaternary: #F47B02,
+  quinary: #A22DB7,
+  senary: #02A0F4,
+  septenary: #D91A4E);
+
+@each $name,
+$color in $badges {
   .badge--#{$name} {
+
     .card__agenda-icon,
-    .card__agenda-footer button{
+    .card__agenda-footer button {
       background-color: $color;
     }
   }
@@ -110,13 +121,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  .card__agenda-time{
+
+  .card__agenda-time {
     font-size: 0.9rem;
     line-height: 1.3rem;
     color: var(--gray-600);
     font-weight: var(--body-bold);
   }
-  h5{
+
+  h5 {
     font-size: 2rem;
     padding: 0 1rem;
     color: var(--gray-dark);
@@ -152,3 +165,75 @@
 }
 
 
+/**************   card step qui sommes nous   ****************/
+
+.card__step {
+  border-radius: 3px;
+  padding: 1rem;
+  height: 100%;
+
+  h4 {
+    text-transform: uppercase;
+  }
+
+  header svg {
+    width: 50px;
+  }
+}
+
+.card__step header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  background-color: transparent;
+}
+
+.card__step-number {
+  font-size: 3.4rem;
+  font-weight: var(--body-bold);
+}
+
+.card__step--one {
+  border: 2px solid var(--theme-primary);
+
+  span,
+  h4,
+  article {
+    color: var(--theme-primary);
+  }
+
+  svg path {
+    fill: var(--theme-primary);
+  }
+}
+
+.card__step--two {
+  border: 2px solid var(--black);
+
+  span,
+  h4,
+  article {
+    color: var(--black);
+  }
+
+  svg path {
+    fill: var(--black);
+  }
+}
+
+.card__step--three {
+  border: 2px solid var(--theme-primary);
+  background-color: var(--theme-primary);
+
+  span,
+  h4,
+  article {
+    color: var(--white);
+  }
+
+  svg path {
+    fill: var(--white);
+  }
+}

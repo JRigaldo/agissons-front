@@ -1,0 +1,131 @@
+.timeline__section {
+    background-color: var(--dark);
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+
+    h2 {
+        font-size: 3rem;
+        color: var(--white);
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+}
+
+.timeline-container {
+    min-height: 75vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timeline {
+    width: 80%;
+    height: auto;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline-content h3 {
+    margin: 1rem 0;
+    line-height: 2rem;
+    color: var(--white);
+    text-align: center;
+    font-weight: var(--body-bold);
+    font-size: 1.4rem;
+}
+
+.timeline-content p {
+    color: var(--gray);
+    text-align: center;
+}
+
+.timeline-content .timeline-date {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    span{
+        background-color: var(--white);
+        padding: 7px 15px;
+        border-radius: 30px;
+        color: var(--dark);
+    }
+}
+
+.timeline ul li {
+    background-color: #1e1f22;
+    color: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.timeline ul li:last-child {
+    margin-bottom: 0;
+}
+
+@include medium-up {
+    .timeline::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 2px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: var(--gray);
+    }
+
+    .timeline-container {
+        min-height: 100vh;
+    }
+
+    .timeline ul li {
+        width: 50%;
+        margin-bottom: 50px;
+        position: relative;
+    }
+
+    .timeline ul li:nth-child(odd) {
+        float: left;
+        clear: right;
+        transform: translateX(-30px);
+
+        border-radius: 20px 0 20px 20px;
+    }
+
+    .timeline ul li:nth-child(even) {
+        float: right;
+        clear: left;
+        transform: translateX(30px);
+        border-radius: 0 20px 20px 20px;
+    }
+
+    .timeline ul li:after {
+        content: "";
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        background-color: var(--gray);
+        border-radius: 50%;
+        top: 0;
+    }
+
+    .timeline ul li:nth-child(odd)::after {
+        right: -30px;
+        transform: translateX(50%) translateY(-50%);
+    }
+
+    .timeline ul li:nth-child(even)::after {
+        left: -30px;
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    .timeline ul li:after {
+        transition-duration: 0.3s;
+    }
+
+    .timeline ul li:hover:after {
+        background-color: var(--theme-primary);
+    }
+}
