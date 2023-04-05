@@ -7,6 +7,12 @@
     flex-direction: column;
     justify-content: space-between;
     transition-duration: .3s;
+    button.btn-primary svg{
+        width: 20px;
+        path{
+            transition-duration: .3s;
+        }
+    }
 }
 
 .card__basic:hover{
@@ -35,3 +41,114 @@
         margin: 0 2px;
     }
 }
+
+.card__agenda {
+  position: relative;
+  flex: 0 0 auto;
+  @extend %shadow;
+  @extend %border-radius;
+  cursor: pointer;
+  margin: 2rem;
+  max-width: 250px;
+
+  &:hover {
+    @extend %shadow-hover;
+  }
+
+  &:first-child {
+    margin-left: 10px;
+  }
+
+  &:last-child {
+    margin-right: 200px;
+  }
+}
+  $badges: (
+    primary: #1D71AE,
+    secondary: #CC2278,
+    tertiary: #1E9F18,
+    quaternary: #F47B02,
+    quinary: #A22DB7,
+    senary: #02A0F4,
+    septenary: #D91A4E
+  );
+
+@each $name, $color in $badges {
+  .badge--#{$name} {
+    .card__agenda-icon,
+    .card__agenda-footer button{
+      background-color: $color;
+    }
+  }
+}
+
+.card__agenda-icon {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  @include flex-center;
+
+  svg {
+    width: 30px;
+
+    path {
+      fill: var(--white);
+    }
+  }
+}
+
+.card__agenda-content {
+  padding: 2rem;
+  min-height: 250px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  .card__agenda-time{
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+    color: var(--gray-600);
+    font-weight: var(--body-bold);
+  }
+  h5{
+    font-size: 2rem;
+    padding: 0 1rem;
+    color: var(--gray-dark);
+    font-weight: var(--body-bold);
+  }
+}
+
+.card__agenda-footer {
+  position: relative;
+  background-color: var(--agenda-footer);
+  padding: 2rem;
+
+  p {
+    text-align: center;
+    color: var(--gray-dark);
+    font-weight: var(--body-bold);
+    color: var(--gray-600);
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+  }
+
+  button {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--theme-primary);
+    border-radius: 30px;
+    color: var(--white);
+    padding: 10px 15px;
+    font-size: 1rem;
+  }
+}
+
+

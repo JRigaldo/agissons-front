@@ -4613,17 +4613,17 @@ button:focus {
   --add-new: #ECF7ED;
   --agenda-footer: #DFE1EB; }
 
-.card__default {
+.card__agenda {
   -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5); }
 
-.card__default:hover {
+.card__agenda:hover {
   -webkit-box-shadow: 0px 7px 10px 4px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0px 7px 10px 4px rgba(0, 0, 0, 0.4);
   box-shadow: 0px 7px 10px 4px rgba(0, 0, 0, 0.4); }
 
-.card__default {
+.card__agenda {
   border-radius: 5px;
   -webkit-border-radius: 5px; }
 
@@ -8010,6 +8010,17 @@ button:focus {
 .inline-block {
   display: inline-block; }
 
+.darken {
+  position: relative; }
+  .darken:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 3px;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4); }
+
 /** ------- GRID ------- **/
 .container {
   position: relative;
@@ -8455,10 +8466,10 @@ body {
   color: var(--black); }
 
 h1 {
-  font-size: 3.4rem;
+  font-size: 3rem;
   font-weight: var(--body-black);
   letter-spacing: 1px;
-  line-height: 3.7rem; }
+  line-height: 3.5rem; }
 
 h2 {
   font-size: 2.3rem;
@@ -8595,7 +8606,6 @@ aside.sticky {
   z-index: -1;
   width: 100%;
   height: 100%;
-  background: url("../images/section-header-01.jpg") center center no-repeat;
   object-fit: cover; }
   .heading .background-image:after {
     content: '';
@@ -8607,13 +8617,37 @@ aside.sticky {
     background: black;
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0%, rgba(255, 255, 255, 0) 100%); }
 
+@media only screen and (min-width: 854px) {
+  .heading .background-image {
+    background: url("../images/section-header-01.jpg") center center no-repeat; } }
+@media only screen and (max-width: 854px) {
+  .heading .background-image {
+    background: url("../images/section-header-01-mobile.jpg") center center no-repeat; } }
 .heading h1,
-.heading h2 {
+.heading h2,
+.heading h3 {
   color: var(--white); }
 
 /**----------- figure -----------**/
 picture.picture__inter {
   position: relative; }
+  picture.picture__inter a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  picture.picture__inter h3,
+  picture.picture__inter h4 {
+    color: var(--white); }
+  picture.picture__inter h3 {
+    font-size: 2.3rem;
+    line-height: 2.8rem; }
   picture.picture__inter:hover a button.btn {
     background-color: var(--theme-primary);
     color: var(--white); }
@@ -8640,111 +8674,12 @@ picture.picture__inter {
   .scrolling-wrapper-flexbox::-webkit-scrollbar-thumb:hover {
     background: #ededed; }
 
-.card__default {
-  position: relative;
-  flex: 0 0 auto;
-  cursor: pointer;
-  margin: 2rem;
-  max-width: 250px; }
-  .card__default:first-child {
-    margin-left: 10px; }
-  .card__default:last-child {
-    margin-right: 200px; }
-
-.badge--primary .card__default-icon,
-.badge--primary .card__default-footer button {
-  background-color: #1D71AE; }
-
-.badge--secondary .card__default-icon,
-.badge--secondary .card__default-footer button {
-  background-color: #CC2278; }
-
-.badge--tertiary .card__default-icon,
-.badge--tertiary .card__default-footer button {
-  background-color: #1E9F18; }
-
-.badge--quaternary .card__default-icon,
-.badge--quaternary .card__default-footer button {
-  background-color: #F47B02; }
-
-.badge--quinary .card__default-icon,
-.badge--quinary .card__default-footer button {
-  background-color: #A22DB7; }
-
-.badge--senary .card__default-icon,
-.badge--senary .card__default-footer button {
-  background-color: #02A0F4; }
-
-.badge--septenary .card__default-icon,
-.badge--septenary .card__default-footer button {
-  background-color: #D91A4E; }
-
-.card__default-icon {
-  position: absolute;
-  top: -25px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: block;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: flex;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  justify-content: center;
-  -webkit-justify-content: center;
-  align-items: center;
-  -webkit-box-align: center;
-  -moz-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center; }
-  .card__default-icon svg {
-    width: 30px; }
-    .card__default-icon svg path {
-      fill: var(--white); }
-
-.card__default-content {
-  padding: 2rem;
-  min-height: 250px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around; }
-  .card__default-content .card__default-time {
-    font-size: 0.9rem;
-    line-height: 1.3rem;
-    color: var(--gray-600);
-    font-weight: var(--body-bold); }
-  .card__default-content h5 {
-    font-size: 2rem;
-    padding: 0 1rem;
-    color: var(--gray-dark);
-    font-weight: var(--body-bold); }
-
-.card__default-footer {
-  position: relative;
-  background-color: var(--agenda-footer);
-  padding: 2rem; }
-  .card__default-footer p {
-    text-align: center;
-    color: var(--gray-dark);
-    font-weight: var(--body-bold);
-    color: var(--gray-600);
-    font-size: 0.9rem;
-    line-height: 1.2rem; }
-  .card__default-footer button {
-    position: absolute;
-    top: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--theme-primary);
-    border-radius: 30px;
-    color: var(--white);
-    padding: 10px 15px;
-    font-size: 1rem; }
+.next-page button.btn-primary svg {
+  width: 20px; }
+  .next-page button.btn-primary svg path {
+    transition-duration: .3s; }
+.next-page:hover button.btn-primary svg path {
+  fill: var(--white); }
 
 nav.aside-nav li {
   margin-top: 50px; }
@@ -8781,10 +8716,6 @@ nav.aside-social a {
   border-radius: 10px;
   padding: 10px; }
 
-.form-container h3,
-.form-container h4 {
-  text-align: center;
-  display: inline-block; }
 .form-container h3 {
   font-size: 1.5rem;
   line-height: 1.9rem;
@@ -8880,6 +8811,21 @@ nav.mobile-menu--text {
         nav.mobile-menu--text ul li a.active {
           background-color: var(--theme-primary);
           color: var(--white); }
+
+header h1 {
+  font-size: 1.5rem;
+  line-height: 1.9rem; }
+header h3 {
+  font-size: 1.1rem;
+  line-height: 1.3rem; }
+header.heading {
+  height: auto; }
+  header.heading .background-image:after {
+    background: rgba(0, 0, 0, 0.7); }
+header .container {
+  width: 100%; }
+header .form-container h4 {
+  font-size: 0.84rem; }
 
 footer.footer {
   background-color: var(--gray-200); }
@@ -9074,7 +9020,7 @@ footer nav.social--row-icon {
   text-transform: uppercase;
   font-family: var(--custom-font);
   min-width: 200px;
-  padding: 10px 15px; }
+  padding: 7px 12px; }
   .btn-primary:hover {
     background-color: var(--gray-800);
     color: var(--white); }
@@ -9230,6 +9176,10 @@ footer nav.social--row-icon {
   flex-direction: column;
   justify-content: space-between;
   transition-duration: .3s; }
+  .card__basic button.btn-primary svg {
+    width: 20px; }
+    .card__basic button.btn-primary svg path {
+      transition-duration: .3s; }
 
 .card__basic:hover {
   background-color: var(--theme-primary); }
@@ -9247,6 +9197,112 @@ footer nav.social--row-icon {
 .card__basic button span,
 .card__basic button svg {
   margin: 0 2px; }
+
+.card__agenda {
+  position: relative;
+  flex: 0 0 auto;
+  cursor: pointer;
+  margin: 2rem;
+  max-width: 250px; }
+  .card__agenda:first-child {
+    margin-left: 10px; }
+  .card__agenda:last-child {
+    margin-right: 200px; }
+
+.badge--primary .card__agenda-icon,
+.badge--primary .card__agenda-footer button {
+  background-color: #1D71AE; }
+
+.badge--secondary .card__agenda-icon,
+.badge--secondary .card__agenda-footer button {
+  background-color: #CC2278; }
+
+.badge--tertiary .card__agenda-icon,
+.badge--tertiary .card__agenda-footer button {
+  background-color: #1E9F18; }
+
+.badge--quaternary .card__agenda-icon,
+.badge--quaternary .card__agenda-footer button {
+  background-color: #F47B02; }
+
+.badge--quinary .card__agenda-icon,
+.badge--quinary .card__agenda-footer button {
+  background-color: #A22DB7; }
+
+.badge--senary .card__agenda-icon,
+.badge--senary .card__agenda-footer button {
+  background-color: #02A0F4; }
+
+.badge--septenary .card__agenda-icon,
+.badge--septenary .card__agenda-footer button {
+  background-color: #D91A4E; }
+
+.card__agenda-icon {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  justify-content: center;
+  -webkit-justify-content: center;
+  align-items: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center; }
+  .card__agenda-icon svg {
+    width: 30px; }
+    .card__agenda-icon svg path {
+      fill: var(--white); }
+
+.card__agenda-content {
+  padding: 2rem;
+  min-height: 250px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around; }
+  .card__agenda-content .card__agenda-time {
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+    color: var(--gray-600);
+    font-weight: var(--body-bold); }
+  .card__agenda-content h5 {
+    font-size: 2rem;
+    padding: 0 1rem;
+    color: var(--gray-dark);
+    font-weight: var(--body-bold); }
+
+.card__agenda-footer {
+  position: relative;
+  background-color: var(--agenda-footer);
+  padding: 2rem; }
+  .card__agenda-footer p {
+    text-align: center;
+    color: var(--gray-dark);
+    font-weight: var(--body-bold);
+    color: var(--gray-600);
+    font-size: 0.9rem;
+    line-height: 1.2rem; }
+  .card__agenda-footer button {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--theme-primary);
+    border-radius: 30px;
+    color: var(--white);
+    padding: 10px 15px;
+    font-size: 1rem; }
 
 .modal-box {
   background-color: rgba(0, 0, 0, 0.2);

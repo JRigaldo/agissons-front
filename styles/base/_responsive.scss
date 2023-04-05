@@ -1,0 +1,22 @@
+header {
+    h1{
+        font-size: 1.5rem;
+        line-height: 1.9rem;
+    }
+    h3{
+        font-size: 1.1rem;
+        line-height: 1.3rem;
+    }
+    &.heading {
+        height: auto;
+        .background-image:after{
+            background: rgba(0, 0, 0, 0.7);
+        }
+    }
+    .container{
+        width: 100%;
+    }
+    .form-container h4{
+        font-size: 0.84rem;
+    }
+}
