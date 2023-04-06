@@ -230,3 +230,35 @@ $color in $badges {
     fill: var(--white);
   }
 }
+
+
+.card__organization{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include shadow-light;
+  border-radius: 5px;
+  padding: 2rem 1rem;
+  height: 100%;
+  min-height: 400px;
+  background-color: var(--white);
+  
+  h4{
+    padding-bottom: 1rem;
+  }
+  a{
+    margin: 0 auto;
+  }
+  button.btn-primary svg {
+    width: 20px;
+    margin-left: 5px;
+
+    path {
+      transition-duration: .3s;
+    }
+  }
+}
+
+.background-gray-light{
+  background-color: var(--gray-200);
+}

@@ -12478,6 +12478,30 @@ footer nav.social--row-icon {
   .card__step--three svg path {
     fill: var(--white); }
 
+.card__organization {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  -webkit-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  padding: 2rem 1rem;
+  height: 100%;
+  min-height: 400px;
+  background-color: var(--white); }
+  .card__organization h4 {
+    padding-bottom: 1rem; }
+  .card__organization a {
+    margin: 0 auto; }
+  .card__organization button.btn-primary svg {
+    width: 20px;
+    margin-left: 5px; }
+    .card__organization button.btn-primary svg path {
+      transition-duration: .3s; }
+
+.background-gray-light {
+  background-color: var(--gray-200); }
+
 .modal-box {
   background-color: rgba(0, 0, 0, 0.2);
   position: fixed;
