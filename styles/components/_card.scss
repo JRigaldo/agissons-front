@@ -74,13 +74,10 @@
   }
 }
 
-$badges: (primary: #1D71AE,
-  secondary: #CC2278,
-  tertiary: #1E9F18,
-  quaternary: #F47B02,
-  quinary: #A22DB7,
-  senary: #02A0F4,
-  septenary: #D91A4E);
+$badges: (primary: #6495ec,
+  secondary: #9900ff,
+  tertiary: #ff6303,
+  quaternary: #ff31b0);
 
 @each $name,
 $color in $badges {
@@ -103,13 +100,8 @@ $color in $badges {
   height: 50px;
   border-radius: 50%;
   @include flex-center;
-
-  svg {
-    width: 30px;
-
-    path {
-      fill: var(--white);
-    }
+  img{
+    width: 35px;
   }
 }
 

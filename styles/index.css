@@ -9288,31 +9288,19 @@ footer nav.social--row-icon {
 
 .badge--primary .card__agenda-icon,
 .badge--primary .card__agenda-footer button {
-  background-color: #1D71AE; }
+  background-color: #6495ec; }
 
 .badge--secondary .card__agenda-icon,
 .badge--secondary .card__agenda-footer button {
-  background-color: #CC2278; }
+  background-color: #9900ff; }
 
 .badge--tertiary .card__agenda-icon,
 .badge--tertiary .card__agenda-footer button {
-  background-color: #1E9F18; }
+  background-color: #ff6303; }
 
 .badge--quaternary .card__agenda-icon,
 .badge--quaternary .card__agenda-footer button {
-  background-color: #F47B02; }
-
-.badge--quinary .card__agenda-icon,
-.badge--quinary .card__agenda-footer button {
-  background-color: #A22DB7; }
-
-.badge--senary .card__agenda-icon,
-.badge--senary .card__agenda-footer button {
-  background-color: #02A0F4; }
-
-.badge--septenary .card__agenda-icon,
-.badge--septenary .card__agenda-footer button {
-  background-color: #D91A4E; }
+  background-color: #ff31b0; }
 
 .card__agenda-icon {
   position: absolute;
@@ -9335,10 +9323,8 @@ footer nav.social--row-icon {
   -moz-box-align: center;
   -ms-flex-align: center;
   -webkit-align-items: center; }
-  .card__agenda-icon svg {
-    width: 30px; }
-    .card__agenda-icon svg path {
-      fill: var(--white); }
+  .card__agenda-icon img {
+    width: 35px; }
 
 .card__agenda-content {
   padding: 2rem;
