@@ -11663,7 +11663,21 @@ h1.heading {
   letter-spacing: 1px;
   line-height: 3.5rem; }
 
-.heading .background-image {
+.heading .background-image--small {
+  position: relative;
+  min-height: 50vh; }
+  .heading .background-image--small:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    object-fit: cover;
+    z-index: -1;
+    width: 100%;
+    height: 100%; }
+
+.heading .background-image--large {
   position: absolute;
   top: 0;
   left: 50%;
@@ -11672,7 +11686,7 @@ h1.heading {
   width: 100%;
   height: 100%;
   object-fit: cover; }
-  .heading .background-image:after {
+  .heading .background-image--large:after {
     content: '';
     position: absolute;
     top: 0;
@@ -11682,16 +11696,34 @@ h1.heading {
     background: black;
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0%, rgba(255, 255, 255, 0) 100%); }
 
-@media only screen and (min-width: 854px) {
-  .heading .background-image {
-    background: url("../images/section-header-01.jpg") center center no-repeat; } }
 @media only screen and (max-width: 854px) {
-  .heading .background-image {
-    background: url("../images/section-header-01-mobile.jpg") center center no-repeat; } }
-.heading h1,
-.heading h2,
-.heading h3 {
+  .heading .background-image--small:after {
+    background: url("../images/agissons_suisse_banner-768.jpg") center center no-repeat; } }
+@media only screen and (min-width: 854px) {
+  .heading .background-image--large {
+    background: url("../images/agissons_suisse_banner-1920x1080.jpg") center center no-repeat; } }
+.heading--large h1,
+.heading--large h3 {
   color: var(--white); }
+
+.heading--small figcaption {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: var(--theme-primary); }
+  .heading--small figcaption h1 {
+    text-align: center;
+    color: var(--white); }
+
+.heading__content {
+  position: relative;
+  top: -5px;
+  background-color: var(--gray-200);
+  padding: 2rem 0.5rem;
+  color: var(--gray-dark); }
+  .heading__content h3 {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    font-weight: var(--body-bold); }
 
 /**----------- figure -----------**/
 .picture__inter {
@@ -11918,9 +11950,6 @@ nav.mobile-menu--text {
   body header.heading h1 {
     font-size: 1.5rem;
     line-height: 1.9rem; }
-  body header.heading h3 {
-    font-size: 1.1rem;
-    line-height: 1.3rem; }
   body header.form-container h4 {
     font-size: 0.84rem; }
   body picture.picture__inter h3 {
@@ -11931,8 +11960,8 @@ nav.mobile-menu--text {
     font-size: 1rem;
     line-height: 1.2rem; }
   body h2 {
-    font-size: 1.8rem;
-    line-height: 2.1rem; }
+    font-size: 1.7rem;
+    line-height: 2rem; }
   body h3 {
     font-size: 1rem;
     line-height: 1.2rem;

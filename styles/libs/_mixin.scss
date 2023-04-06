@@ -1,5 +1,5 @@
 $medium-responsive: 854px !default;
-$custom-responsive: 555px !default;
+//$custom-responsive: 555px !default;
 
 @mixin medium-up {
   @media only screen and (min-width: #{$medium-responsive}) {
@@ -25,7 +25,7 @@ $custom-responsive: 555px !default;
   }
 }
 
-@mixin custom-responsice-middle($custom-responsive-max: "", $custom-responsive-min: "") {
+@mixin custom-responsive-middle($custom-responsive-max, $custom-responsive-min) {
   @media only screen and (max-width: #{$custom-responsive-max}) and (min-width: #{$custom-responsive-min}) {
     @content;
   }

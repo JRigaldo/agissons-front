@@ -12,7 +12,23 @@ h1.heading {
   line-height: 3.5rem;
 }
 
-.heading .background-image {
+.heading .background-image--small{
+  position: relative;
+  min-height: 50vh;
+  &:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    object-fit: cover;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.heading .background-image--large {
   position: absolute;
   top: 0;
   left: 50%;
@@ -34,22 +50,44 @@ h1.heading {
   }
 }
 
-@include medium-up{
-  .heading .background-image{
-    background: url('../images/section-header-01.jpg') center center no-repeat;
-  }
-}
-
 @include medium-down{
-  .heading .background-image{
-    background: url('../images/section-header-01-mobile.jpg') center center no-repeat;
+  .heading .background-image--small:after{
+    background: url('../images/agissons_suisse_banner-768.jpg') center center no-repeat;
   }
 }
 
-.heading h1,
-.heading h2,
-.heading h3 {
+@include medium-up{
+  .heading .background-image--large{
+    background: url('../images/agissons_suisse_banner-1920x1080.jpg') center center no-repeat;
+  }
+}
+
+
+.heading--large h1,
+.heading--large h3 {
   color: var(--white);
+}
+
+.heading--small figcaption {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: var(--theme-primary);
+  h1{
+    text-align: center;
+    color: var(--white);
+}
+}
+.heading__content {
+  position: relative;
+  top: -5px;
+  background-color: var(--gray-200);
+  padding: 2rem 0.5rem;
+  color: var(--gray-dark);
+  h3{
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    font-weight: var(--body-bold);
+  }
 }
 
 /**----------- figure -----------**/

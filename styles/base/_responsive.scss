@@ -5,11 +5,6 @@
                 font-size: 1.5rem;
                 line-height: 1.9rem;
             }
-
-            h3 {
-                font-size: 1.1rem;
-                line-height: 1.3rem;
-            }
         }
 
         header.form-container h4 {
@@ -30,8 +25,8 @@
         }
 
         h2 {
-            font-size: 1.8rem;
-            line-height: 2.1rem;
+            font-size: 1.7rem;
+            line-height: 2rem;
         }
 
         h3 {
@@ -44,7 +39,6 @@
     header {
         &.heading {
             height: auto;
-
             .background-image:after {
                 background: rgba(0, 0, 0, 0.7);
             }
