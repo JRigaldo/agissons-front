@@ -10,6 +10,10 @@
   max-width: 80rem;
 }
 
+.container--gallery{
+  max-width: 50rem;
+}
+
 .row-center {
   display: flex;
   display: -webkit-box;
@@ -65,8 +69,8 @@
 
 .gutter-columns > [class^="col-"],
 .gutter-columns > [class^=" col-"]{
-  margin-top: 6rem;
-  margin-bottom: 6rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .gutter > [class^="col-"],
@@ -83,8 +87,8 @@
   }
   div.gutter-columns > [class^="col-"],
   div.gutter-columns  > [class^=" col-"]{
-    margin-top: 2rem;
-    margin-bottom:2rem;
+    margin-top: 1rem;
+    margin-bottom:1rem;
   }
 }
 

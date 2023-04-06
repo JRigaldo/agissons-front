@@ -8034,6 +8034,9 @@ button:focus {
 .container--large {
   max-width: 80rem; }
 
+.container--gallery {
+  max-width: 50rem; }
+
 .row-center {
   display: flex;
   display: -webkit-box;
@@ -8083,8 +8086,8 @@ button:focus {
 
 .gutter-columns > [class^="col-"],
 .gutter-columns > [class^=" col-"] {
-  margin-top: 6rem;
-  margin-bottom: 6rem; }
+  margin-top: 3rem;
+  margin-bottom: 3rem; }
 
 .gutter > [class^="col-"],
 .gutter > [class^=" col-"] {
@@ -8099,8 +8102,8 @@ button:focus {
 
   div.gutter-columns > [class^="col-"],
   div.gutter-columns > [class^=" col-"] {
-    margin-top: 2rem;
-    margin-bottom: 2rem; } }
+    margin-top: 1rem;
+    margin-bottom: 1rem; } }
 @media only screen and (max-width: 1080px) {
   .col-sm-1 {
     flex: 0 0 8.3333333333%; }
@@ -8683,6 +8686,41 @@ aside.sticky {
 .next-page:hover button.btn-primary svg path {
   fill: var(--white); }
 
+.gallery__text,
+.gallery__figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%; }
+  .gallery__text figure,
+  .gallery__figure figure {
+    position: relative; }
+
+.gallery__figure img {
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 300px;
+  display: block;
+  margin: 0 auto; }
+
+.gallery__text h3 {
+  color: var(--dark);
+  font-size: 1.2rem;
+  line-height: 1.4rem; }
+  .gallery__text h3 strong {
+    color: var(--theme-primary); }
+.gallery__text cite {
+  position: relative;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: var(--gray-700); }
+  .gallery__text cite span {
+    font-size: 1.5rem; }
+    .gallery__text cite span:first-child {
+      margin-right: 5px; }
+    .gallery__text cite span:last-child {
+      margin-left: 5px; }
+
 nav.aside-nav li {
   margin-top: 50px; }
   nav.aside-nav li:first-child {
@@ -8859,7 +8897,10 @@ nav.mobile-menu--text {
     object-fit: cover; }
 
   div.card__agenda {
-    margin: 2rem 0.5rem; } }
+    margin: 2rem 0.5rem; }
+
+  div.gallery__text cite {
+    margin-bottom: 3rem; } }
 footer.footer {
   background-color: var(--gray-200); }
 
