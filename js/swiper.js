@@ -1,22 +1,23 @@
 jQuery(function ($) {
     $(document).ready(function () {
-        
-        var swiperL = document.querySelector('.swiper-l');
-        if (typeof swiperL !== 'undefined' && swiperL) {
-            var swiperLeft = new Swiper(swiperL, {
+
+        var swiper = document.querySelector('.swiper');
+        if (typeof swiper !== 'undefined' && swiper) {
+            var swiper = new Swiper(swiper, {
+                slidesPerView: 'auto',
+                centeredSlides: true,
+                spaceBetween: 30,
                 loop: true,
-                slidesPerView: 3,
                 pagination: {
-                    el: ".swiper-pagination",
+                    el: '.swiper-pagination',
                     clickable: true,
-                    dynamicBullets: true,
-                    type: 'bullets',
                 },
-                 navigation: {
-                    nextEl: ".swiper-button-next",
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
                 },
             });
-            console.log(swiperLeft);
+            console.log(swiper);
         }
     });
 });
