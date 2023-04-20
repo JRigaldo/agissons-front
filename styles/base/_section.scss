@@ -2,7 +2,6 @@
   position: relative;
   height: 90vh;
   width: 100%;
-  margin-bottom: 30px;
 }
 
 h1.heading {
@@ -92,6 +91,18 @@ h1.heading {
     line-height: 1.4rem;
     font-weight: var(--body-bold);
   }
+}
+
+/**----------- intro -----------**/
+.intro h4{
+  font-size: 0.9rem;
+}
+
+.intro h2,
+.intro h1{
+  font-size: 1.8rem;
+  color: var(--black);
+  font-weight: var(--body-bold);
 }
 
 /**----------- figure -----------**/
@@ -296,3 +307,9 @@ h1.heading {
   background: rgb(110, 193, 181);
   background: linear-gradient(145deg, rgba(110, 193, 181, 1) 0%, rgba(204, 224, 239, 1) 100%);
 }
+
+.gradient-11 {
+  background: rgb(117,202,229);
+  background: linear-gradient(145deg, rgba(117,202,229,1) 0%, rgba(183,176,153,1) 48%, rgba(228,110,41,1) 100%);
+}
+

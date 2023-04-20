@@ -11096,6 +11096,9 @@ button:focus {
 .radius-bottom-right {
   border-bottom-right-radius: 10px; }
 
+.gray-title {
+  color: var(--gray-600); }
+
 /** ------- GRID ------- **/
 .container {
   position: relative;
@@ -11666,8 +11669,7 @@ aside.sticky {
 .heading {
   position: relative;
   height: 90vh;
-  width: 100%;
-  margin-bottom: 30px; }
+  width: 100%; }
 
 h1.heading {
   font-size: 3rem;
@@ -11736,6 +11738,16 @@ h1.heading {
     font-size: 1.2rem;
     line-height: 1.4rem;
     font-weight: var(--body-bold); }
+
+/**----------- intro -----------**/
+.intro h4 {
+  font-size: 0.9rem; }
+
+.intro h2,
+.intro h1 {
+  font-size: 1.8rem;
+  color: var(--black);
+  font-weight: var(--body-bold); }
 
 /**----------- figure -----------**/
 .picture__inter {
@@ -11872,6 +11884,10 @@ h1.heading {
 .gradient-10 {
   background: #6ec1b5;
   background: linear-gradient(145deg, #6ec1b5 0%, #cce0ef 100%); }
+
+.gradient-11 {
+  background: #75cae5;
+  background: linear-gradient(145deg, #75cae5 0%, #b7b099 48%, #e46e29 100%); }
 
 nav.aside-nav li {
   margin-top: 50px; }
@@ -12010,6 +12026,8 @@ nav.mobile-menu--text {
   body header.heading h1 {
     font-size: 1.5rem;
     line-height: 1.9rem; }
+  body div.intro h4, body div.intro h2 {
+    text-align: center; }
   body header.form-container h4 {
     font-size: 0.84rem; }
   body picture.picture__inter h3 {
@@ -12020,7 +12038,7 @@ nav.mobile-menu--text {
     font-size: 1rem;
     line-height: 1.2rem; }
   body h2 {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     line-height: 2rem; }
   body h3 {
     font-size: 1rem;
@@ -12031,6 +12049,8 @@ nav.mobile-menu--text {
     height: auto; }
     header.heading .background-image:after {
       background: rgba(0, 0, 0, 0.7); }
+    header.heading .heading__content {
+      background-color: var(--gray-100); }
   header .container {
     width: 100%; }
 
@@ -12045,7 +12065,7 @@ nav.mobile-menu--text {
     width: 100%;
     object-fit: cover; }
 
-  div.card__agenda {
+  .scrolling-wrapper-flexbox div.card__agenda {
     margin: 2rem 0.5rem; }
 
   div.gallery__text cite {
@@ -12806,6 +12826,8 @@ div.swiper-button-prev:after {
         height: auto; }
     .swiper-item .gallery__text {
       padding: 20px 10%; }
+    .swiper-item .gallery__text cite {
+      font-size: 0.8rem; }
 
   div.swiper-button-next:after,
   div.swiper-button-prev:after {
