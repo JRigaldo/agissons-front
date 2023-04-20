@@ -4618,7 +4618,7 @@ button:focus {
   -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5); }
 
-.card__agenda:hover {
+.scrolling-wrapper-flexbox .card__agenda:hover {
   -webkit-box-shadow: 0px 7px 10px 4px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0px 7px 10px 4px rgba(0, 0, 0, 0.4);
   box-shadow: 0px 7px 10px 4px rgba(0, 0, 0, 0.4); }
@@ -11771,6 +11771,13 @@ h1.heading {
   .scrolling-wrapper-flexbox::-webkit-scrollbar-thumb:hover {
     background: #ededed; }
 
+.scrolling-wrapper-flexbox .card__agenda {
+  margin: 2rem; }
+  .scrolling-wrapper-flexbox .card__agenda:first-child {
+    margin-left: 10px; }
+  .scrolling-wrapper-flexbox .card__agenda:last-child {
+    margin-right: 200px; }
+
 .next-page button.btn-primary svg {
   width: 20px; }
   .next-page button.btn-primary svg path {
@@ -12368,12 +12375,7 @@ footer nav.social--row-icon {
   position: relative;
   flex: 0 0 auto;
   cursor: pointer;
-  margin: 2rem;
   max-width: 250px; }
-  .card__agenda:first-child {
-    margin-left: 10px; }
-  .card__agenda:last-child {
-    margin-right: 200px; }
 
 .badge--primary .card__agenda-icon,
 .badge--primary .card__agenda-footer button {

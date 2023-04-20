@@ -158,6 +158,21 @@ h1.heading {
   }
 }
 
+.scrolling-wrapper-flexbox .card__agenda{
+  margin: 2rem;
+  &:hover {
+    @extend %shadow-hover;
+  }
+
+  &:first-child {
+    margin-left: 10px;
+  }
+
+  &:last-child {
+    margin-right: 200px;
+  }
+}
+
 .next-page {
   button.btn-primary svg {
     width: 20px;

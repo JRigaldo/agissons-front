@@ -58,20 +58,7 @@
   @extend %shadow;
   @extend %border-radius;
   cursor: pointer;
-  margin: 2rem;
   max-width: 250px;
-
-  &:hover {
-    @extend %shadow-hover;
-  }
-
-  &:first-child {
-    margin-left: 10px;
-  }
-
-  &:last-child {
-    margin-right: 200px;
-  }
 }
 
 $badges: (primary: #6495ec,
