@@ -12199,6 +12199,9 @@ nav.aside-social a {
   nav.aside-social a:hover svg path {
     fill: var(--theme-primary); }
 
+.form-container.form-column {
+  flex-direction: column; }
+
 .form-container {
   background-color: var(--white);
   border-radius: 10px;
@@ -12206,10 +12209,7 @@ nav.aside-social a {
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  min-height: 800px; }
+  align-items: center; }
 
 .form-container h3 {
   font-size: 1.5rem;
