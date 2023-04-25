@@ -16,6 +16,8 @@
 @import "../node_modules/bootstrap/scss/forms/labels";
 @import "../node_modules/bootstrap/scss/forms/validation";
 
+@import "../node_modules/bootstrap/scss/dropdown";
+
 @import "libs/reset";
 @import "libs/vars";
 @import "libs/mixin";
@@ -41,3 +43,4 @@
 @import "components/navbar";
 @import "components/form-modal";
 @import "components/timeline";
+@import "components/video";

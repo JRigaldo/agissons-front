@@ -250,3 +250,12 @@ $color in $badges {
   background-color: var(--gray-200);
 }
 
+/**************   card contact   ****************/
+
+.card__contact{
+  padding: 2rem 0.5rem;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
