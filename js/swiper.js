@@ -19,5 +19,13 @@ jQuery(function ($) {
             });
             console.log(swiper);
         }
+
+        var swiperAd = document.querySelector('.swiper-ad');
+        if (typeof swiperAd !== 'undefined' && swiperAd) {
+            var swiperAd = new Swiper(swiperAd, {
+                centeredSlides: true,
+                spaceBetween: 10,
+            });
+        }
     });
 });
