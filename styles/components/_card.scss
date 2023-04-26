@@ -87,7 +87,8 @@ $color in $badges {
   height: 50px;
   border-radius: 50%;
   @include flex-center;
-  img{
+
+  img {
     width: 35px;
   }
 }
@@ -219,7 +220,7 @@ $color in $badges {
 }
 
 
-.card__organization{
+.card__organization {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -229,13 +230,15 @@ $color in $badges {
   height: 100%;
   min-height: 400px;
   background-color: var(--white);
-  
-  h4{
+
+  h4 {
     padding-bottom: 1rem;
   }
-  a{
+
+  a {
     margin: 0 auto;
   }
+
   button.btn-primary svg {
     width: 20px;
     margin-left: 5px;
@@ -246,11 +249,11 @@ $color in $badges {
   }
 }
 
-.background-gray-light{
+.background-gray-light {
   background-color: var(--gray-200);
 }
 
-/**************   card contact   ****************/
+/**************   card contact  
 
 .card__contact{
   padding: 2rem 0.5rem;
@@ -258,4 +261,71 @@ $color in $badges {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+ ****************/
+
+/**************   card link (contact page)   ****************/
+
+a.card__link {
+  border-radius: 10px;
+  overflow: hidden;
+  transition-duration: 300ms;
+  @include shadow;
+
+  &:hover {
+    background-color: var(--theme-primary);
+
+    figure .card__link--button {
+      background-color: var(--white);
+
+      svg path {
+        fill: var(--theme-primary);
+      }
+    }
+
+    h3,
+    p {
+      color: var(--white);
+    }
+  }
+
+  figure {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 50px 400px;
+    grid-template-rows: min-content;
+
+    figcaption {
+      padding: 20px;
+    }
+
+    .card__link--button {
+      height: 100%;
+      background-color: var(--theme-primary);
+      transition-duration: 300ms;
+      @include flex-center;
+
+      svg path {
+        fill: var(--white);
+        transition-duration: 300ms;
+      }
+    }
+
+    picture {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      img {
+        @include absolute-center;
+        height: 100%;
+        width: auto;
+        object-fit: fill;
+        @include custom-responsive-up(1350px){
+          height: auto;
+          width: 100%;
+        }
+      }
+    }
+  }
 }

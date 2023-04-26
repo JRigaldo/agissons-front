@@ -237,66 +237,179 @@
                 </div>
             </section>
             <section>
-                <form class="form-container">
+                <div class="container">
+                    <div class="form-container">
                     <div class="form-box">
-                        <div class="form-box__left">
-                            <h3 class="txt-c">Devenez bénévole, rejoignez-nous !</h3>
-                            <h4 class="txt-c">L’étape la plus compliquée, c’est de faire le premier pas. Ensuite, tout
-                                devient facile !</h4>
-                        </div>
+                        <div class="form-box__left"></div>
                         <div class="form-box__right">
-                            <div class="row-top gutter">
-                                <div class="col-md-12">
-                                    <h2 class="pt-30 pb-10 txt-c">Deviens bénévoles, des gens de tous les jours
-                                        s’engagent, Rejoins-nous !</h2>
-                                    <p class="form-box__description txt-c mb-small-30 mb-30">Alors, tu es prêt·es pour l’aventure ?
-                                        Inscris-toi sur le formulaire et passe à l’action !</p>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <div class="mb-3">
-                                      <label class="form-label">Qu'aimerais-tu faire ?</label>
-                                      <select class="form-select" aria-label="Default select example">
-                                        <option selected>Pôle action</option>
-                                        <option value="1">Pôle communication</option>
-                                        <option value="2">Pôle finance</option>
-                                        <option value="3">Pôle logistique</option>
-                                        <option value="3">Pôle politique</option>
-                                        <option value="3">Recolte de signature</option>
-                                        <option value="3">À voir</option>
-                                    </select>
+                            <form class="row-center gutter" action="#" method="POST">
+                                <h2 class="pt-30 pb-10 txt-c">Deviens bénévoles, des gens de tous les jours
+                                    s’engagent, Rejoins-nous !</h2>
+                                <p class="form-box__description txt-c mb-small-30 mb-50">L’étape la plus compliquée,
+                                    c’est de faire le premier pas. Ensuite, tout devient facile ! Alors, tu es prêt·es
+                                    pour l’aventure ? Inscris-toi sur le formulaire et passe à l’action !</p>
+                                <div class="col-12 col-md-12">
+                                    <div class="mb-5">
+                                        <label class="form-label">Dans quoi aimerais-tu agir ?</label>
+                                        <select class="form-select form-select-lg mb-5 mt-5"
+                                            aria-label="Default select example">
+                                            <option selected>Pôle action</option>
+                                            <option value="1">Pôle communication</option>
+                                            <option value="2">Pôle finance</option>
+                                            <option value="3">Pôle logistique</option>
+                                            <option value="3">Pôle politique</option>
+                                            <option value="3">Recolte de signatures</option>
+                                            <option value="3">Je sais pas</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6">
-                                    <div class="mb-3">
-                                        <label for="username" class="form-label">Email address</label>
-                                        <input type="text" class="form-control" placeholder="Prémon" aria-label="Username">
+                                    <div class="form-floating mb-5">
+                                        <input type="text" class="form-control" id="firstname" placeholder="prenom"
+                                            name="firstname">
+                                        <label for="firstname">Prénom</label>
                                     </div>
                                 </div>
-                            </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="form-floating mb-5">
+                                        <input type="text" class="form-control" id="lastname" placeholder="nom"
+                                            name="lastname">
+                                        <label for="lastname">Nom</label>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-12">
+                                    <div class="form-floating mb-5">
+                                        <input type="email" class="form-control" id="email"
+                                            placeholder="nom@example.com">
+                                        <label for="email">Email</label>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-12">
+                                    <button class="btn btn-primary">Bienvenu</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
-                </form>
+                </div>
+                </div>
             </section>
             <section class="container pt-small-50 pb-small-50 pt-50 pb-50">
                 <div class="row-top gutter mb-small-30 mb-50">
                     <div class="col-12 col-md-12">
-                        <h4 class="mb-small-30 mt-small-30 mt-30 mb-50 gray-title">En nous rejoignant, vous aurez
+                        <a href="#" class="card__link">
+                            <figure>
+                                <figcaption>
+                                    <h3 class="mb-30">Venez nous rencontrer lors d’une de nos soirées d’information ou
+                                        apéro de campagne
+                                    </h3>
+                                    <p>Tout le monde a quelque chose à apporter, peu importe votre âge, votre
+                                        nationalité,
+                                        votre expérience et vos compétences. Et avec chacun et chacune d’entre vous,
+                                        tout
+                                        devient possible.</p>
+                                </figcaption>
+                                <div class="card__link--button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="27.423" height="27.423"
+                                    viewBox="0 0 27.423 27.423">
+                                    <path id="arrow_forward_FILL0_wght400_GRAD0_opsz48"
+                                        d="M173.712,283.423l-1.8-1.842L182.5,271H160v-2.571h22.5l-10.584-10.584,1.8-1.842,13.712,13.712Z"
+                                        transform="translate(-160 -256)" fill="#fff" />
+                                </svg>
+                                </div>
+                                <picture><img src="../images/contact-agissons-1000px.jpg" alt="contact agissons-ch"></picture>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-12">
+                        <h4 class="mb-small-30 mt-small-30 mt-100 mb-50 txt-primary">En nous rejoignant, vous aurez
                             l’opportunité de participer à des projets concrets et d’échanger avec des personnes engagées
                             et motivées comme vous.</h4>
                     </div>
                     <div class="col-12 col-md-12">
-                        <p>Venez nous rencontrer lors d’une de nos soirées d’information ou apéro de campagne,
-                            remplissez le formulaire de prise de contact, ou contactez-nous par mail ou sur nos réseaux
-                            sociaux. Nous vous répondrons très vite et saurons vous renseigner et vous aider à trouver
-                            une place valorisée, conviviale et utile au sein de notre grand mouvement citoyen. AG!SSONS,
-                            c’est vous !</p>
-                        <p>Tout le monde a quelque chose à apporter, peu importe votre âge, votre nationalité, votre
-                            expérience et vos compétences. Et avec chacun et chacune d’entre vous, tout devient
-                            possible.</p>
+                        <p>Contactez-nous par mail ou sur nos réseaux sociaux. Nous vous répondrons très vite et saurons
+                            vous renseigner et vous aider à trouver une place valorisée, conviviale et utile au sein de
+                            notre grand mouvement citoyen. AG!SSONS, c’est vous !</p>
                         <p>Ensemble, nous pouvons proposer à nos proches, à notre famille, à nos ami·es, à nos
                             collègues, à nos connaissances de soutenir et rejoindre le mouvement, de s’engager en
                             commun.</p>
                     </div>
+                    <div class="scrolling-wrapper-flexbox mt-100">
+                    <div class="card__agenda badge--primary">
+                        <span class="card__agenda-icon">
+                            <img src="../images/icon-edit-50x50.png" alt="edit icon">
+                        </span>
+                        <div class="card__agenda-content">
+                            <p class="card__agenda-time">Mercredi <time>17.04.2023</time><br>à notre local</p>
+                            <h5>Séance d’information</h5>
+                        </div>
+                        <div class="card__agenda-footer">
+                            <button><time>18h - 18h30</time></button>
+                            <p>
+                                Avenue Villamont 17 <br>
+                                1003 Lausanne
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card__agenda badge--secondary">
+                        <span class="card__agenda-icon">
+                            <img src="../images/icon-time-50x50.png" alt="time icon">
+                        </span>
+                        <div class="card__agenda-content">
+                            <p class="card__agenda-time">Mercredi <time>17.04.2023</time><br>à notre local</p>
+                            <h5>Séance d’information</h5>
+                        </div>
+                        <div class="card__agenda-footer">
+                            <button><time>18h - 18h30</time></button>
+                            <p>
+                                Avenue Villamont 17 <br>
+                                1003 Lausanne
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card__agenda badge--tertiary">
+                        <span class="card__agenda-icon">
+                            <img src="../images/icon-together-50x50.png" alt="together icon">
+                        </span>
+                        <div class="card__agenda-content">
+                            <p class="card__agenda-time">Mercredi <time>17.04.2023</time><br>à notre local</p>
+                            <h5>Séance d’information</h5>
+                        </div>
+                        <div class="card__agenda-footer">
+                            <button><time>18h - 18h30</time></button>
+                            <p>
+                                Avenue Villamont 17 <br>
+                                1003 Lausanne
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card__agenda badge--quaternary">
+                        <span class="card__agenda-icon">
+                            <img src="../images/icon-bullhorn-50x50.png" alt="bullhorn icon">
+                        </span>
+                        <div class="card__agenda-content">
+                            <p class="card__agenda-time">Mercredi <time>17.04.2023</time><br>à notre local</p>
+                            <h5>Séance d’information</h5>
+                        </div>
+                        <div class="card__agenda-footer">
+                            <button><time>18h - 18h30</time></button>
+                            <p>
+                                Avenue Villamont 17 <br>
+                                1003 Lausanne
+                            </p>
+                        </div>
+                    </div>
+                    <div class="next-page flex-center mr-50"><a href="#"><button
+                                class="btn-flex center-center btn-primary">
+                                <span>Toutes les dates</span>
+                                <svg class="ml-10" xmlns="http://www.w3.org/2000/svg" width="27.423" height="27.423"
+                                    viewBox="0 0 27.423 27.423">
+                                    <path id="arrow_forward_FILL0_wght400_GRAD0_opsz48"
+                                        d="M173.712,283.423l-1.8-1.842L182.5,271H160v-2.571h22.5l-10.584-10.584,1.8-1.842,13.712,13.712Z"
+                                        transform="translate(-160 -256)" fill="#fff" />
+                                </svg>
+                            </button></a>
+                    </div>
+                </div>
                 </div>
             </section>
         </main>
