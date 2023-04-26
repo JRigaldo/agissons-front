@@ -12224,7 +12224,23 @@ nav.aside-social a {
   color: var(--gray-700);
   font-weight: var(--body-normal); }
 
-/**************   form contact   ****************/
+/**************   form   ****************/
+.form__contact .form-box__left {
+  background-image: url("../images/contact.png"); }
+
+.form__donation .form-box__left {
+  background-image: url("../images/team-goals.png"); }
+
+.form-box__left h3,
+.form-box__left p {
+  text-align: center; }
+
+.form-box__left h3 {
+  font-size: 1.2rem; }
+
+.form-box__left p {
+  margin-bottom: 5px; }
+
 .form-box {
   min-height: 650px;
   width: 100%;
@@ -12241,11 +12257,12 @@ nav.aside-social a {
 .form-box__left {
   height: 100%;
   max-width: 400px;
-  background: url("../images/contact.png") no-repeat center;
   background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   max-width: 644px;
   background-color: rgba(30, 113, 174, 0.05);
-  padding: 0.2rem; }
+  padding: 1rem; }
 
 .form-box__right {
   padding: 0.5rem; }
@@ -12932,16 +12949,14 @@ footer nav.social--row-icon {
 .background-gray-light {
   background-color: var(--gray-200); }
 
-/**************   card contact  
-
-.card__contact{
+/**************   card contact   ****************/
+.card__contact {
   padding: 2rem 0.5rem;
   min-height: 300px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-}
- ****************/
+  justify-content: space-between; }
+
 /**************   card link (contact page)   ****************/
 a.card__link {
   border-radius: 10px;
@@ -13002,6 +13017,24 @@ a.card__link {
           a.card__link figure picture img {
             height: auto;
             width: 100%; } }
+
+/**************   card qrcode donation   ****************/
+.card__qr {
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem; }
+  .card__qr img {
+    max-width: 400px; }
+
+.card__qr-description {
+  text-align: center; }
+  .card__qr-description h4, .card__qr-description p {
+    color: var(--white); }
 
 .modal-box {
   background-color: rgba(0, 0, 0, 0.2);
@@ -13478,5 +13511,79 @@ div.swiper-button-prev:after {
   left: 0;
   bottom: 0;
   right: 0; }
+
+/***************** radio button *****************/
+.radio-button input[type="radio"] {
+  display: none; }
+
+.radio-button-label {
+  display: inline-block;
+  border: 1px solid var(--gray-400);
+  border-radius: 5px;
+  padding: 1rem;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  background-color: var(--white); }
+  .radio-button-label:hover {
+    background-color: var(--gray-200);
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5); }
+
+.radio-button-input:checked + .radio-button-label {
+  background-color: var(--theme-primary);
+  color: var(--white); }
+
+/***************** radio switch *****************/
+input[type="radio"].field-radio {
+  display: none; }
+
+.field-radio {
+  display: inline-block;
+  margin: 10px 0; }
+
+label.field-label-radio {
+  position: relative;
+  display: inline;
+  color: var(--black);
+  border: 1px solid var(--secondary);
+  border-radius: 5px;
+  padding: 5px 10px;
+  width: auto;
+  font-size: 0.9rem;
+  cursor: pointer; }
+
+label.field-label-radio:before {
+  position: relative;
+  top: 7px;
+  display: inline-block;
+  content: '';
+  height: 25px;
+  width: 25px;
+  border: 1px solid var(--gray);
+  border-radius: 50%;
+  left: -5px; }
+
+input[type="radio"]:checked + label.field-label-radio {
+  background-color: var(--primary);
+  color: var(--white); }
+
+input[type="radio"]:checked + label.field-label-radio:before {
+  position: relative;
+  top: 7px;
+  display: inline-block;
+  content: '';
+  height: 25px;
+  width: 25px;
+  border: 10px solid var(--white);
+  background-color: var(--black);
+  border-radius: 50%;
+  left: -5px; }
+
+.field-radio span {
+  display: block; }
 
 /*# sourceMappingURL=index.css.map */

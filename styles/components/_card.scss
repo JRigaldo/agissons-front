@@ -253,7 +253,7 @@ $color in $badges {
   background-color: var(--gray-200);
 }
 
-/**************   card contact  
+/**************   card contact   ****************/
 
 .card__contact{
   padding: 2rem 0.5rem;
@@ -262,7 +262,7 @@ $color in $badges {
   flex-direction: column;
   justify-content: space-between;
 }
- ****************/
+
 
 /**************   card link (contact page)   ****************/
 
@@ -327,5 +327,27 @@ a.card__link {
         }
       }
     }
+  }
+}
+
+
+/**************   card qrcode donation   ****************/
+.card__qr{
+  border-radius: 10px;
+  @include shadow-light;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  img{
+    max-width: 400px;
+  }
+}
+
+.card__qr-description{
+  text-align: center;
+  h4, p{
+    color: var(--white);
   }
 }

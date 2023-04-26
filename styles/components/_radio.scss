@@ -1,3 +1,32 @@
+/***************** radio button *****************/
+.radio-button input[type="radio"]{
+  display: none;
+}
+
+.radio-button-label{
+  display: inline-block;
+  border: 1px solid var(--gray-400);
+  border-radius: 5px;
+  padding: 1rem;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  background-color: var(--white);
+  &:hover{
+    background-color: var(--gray-200);
+    @include shadow;
+  }
+}
+
+.radio-button-input:checked + .radio-button-label{
+  background-color: var(--theme-primary);
+  color: var(--white);
+}
+
+
+/***************** radio switch *****************/
 input[type="radio"].field-radio{
   display: none;
 }

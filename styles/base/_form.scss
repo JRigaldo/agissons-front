@@ -27,7 +27,29 @@
   }
 }
 
-/**************   form contact   ****************/
+/**************   form   ****************/
+.form__contact .form-box__left{
+  background-image: url('../images/contact.png');
+}
+
+.form__donation .form-box__left{
+  background-image: url('../images/team-goals.png');
+}
+
+.form-box__left h3,
+.form-box__left p{
+  text-align: center;
+}
+
+.form-box__left h3{
+  font-size: 1.2rem;
+}
+
+.form-box__left p{
+  margin-bottom: 5px;
+}
+
+
 .form-box {
   min-height: 650px;
   width: 100%;
@@ -44,11 +66,12 @@
 .form-box__left {
   height: 100%;
   max-width: 400px;
-  background: url('../images/contact.png') no-repeat center;
   background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   max-width: 644px;
   background-color: rgba(30, 113, 174, 0.05);
-  padding: 0.2rem;
+  padding: 1rem;
 }
 
 .form-box__right {

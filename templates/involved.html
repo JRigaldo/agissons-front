@@ -238,41 +238,43 @@
             </section>
             <section>
                 <div class="container">
-                    <div class="form-container">
+                    <div class="form-container form__contact">
                     <div class="form-box">
                         <div class="form-box__left"></div>
                         <div class="form-box__right">
-                            <form class="row-center gutter" action="#" method="POST">
-                                <h2 class="pt-30 pb-10 txt-c">Deviens bénévoles, des gens de tous les jours
+                            <form action="#" method="POST">
+                                <div class="row-center gutter">
+                                    <h2 class="pt-30 pb-10 txt-c">Deviens bénévoles, des gens de tous les jours
                                     s’engagent, Rejoins-nous !</h2>
                                 <p class="form-box__description txt-c mb-small-30 mb-50">L’étape la plus compliquée,
                                     c’est de faire le premier pas. Ensuite, tout devient facile ! Alors, tu es prêt·es
                                     pour l’aventure ? Inscris-toi sur le formulaire et passe à l’action !</p>
                                 <div class="col-12 col-md-12">
                                     <div class="mb-5">
-                                        <label class="form-label">Dans quoi aimerais-tu agir ?</label>
-                                        <select class="form-select form-select-lg mb-5 mt-5"
-                                            aria-label="Default select example">
-                                            <option selected>Pôle action</option>
-                                            <option value="1">Pôle communication</option>
-                                            <option value="2">Pôle finance</option>
-                                            <option value="3">Pôle logistique</option>
-                                            <option value="3">Pôle politique</option>
-                                            <option value="3">Recolte de signatures</option>
-                                            <option value="3">Je sais pas</option>
-                                        </select>
+                                        <div class="form-floating">
+                                            <select class="form-select" id="contact-role" aria-label="Dans quoi aimerais-tu agir ?">
+                                                <option selected>Pôle action</option>
+                                                <option value="1">Pôle communication</option>
+                                                <option value="2">Pôle finance</option>
+                                                <option value="3">Pôle logistique</option>
+                                                <option value="3">Pôle politique</option>
+                                                <option value="3">Recolte de signatures</option>
+                                                <option value="3">Je sais pas</option>
+                                            </select>
+                                            <label for="contact-role">Dans quoi aimerais-tu agir ?</label>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6">
                                     <div class="form-floating mb-5">
-                                        <input type="text" class="form-control" id="firstname" placeholder="prenom"
+                                        <input type="text" class="form-control" id="firstname" placeholder="firstname"
                                             name="firstname">
                                         <label for="firstname">Prénom</label>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6">
                                     <div class="form-floating mb-5">
-                                        <input type="text" class="form-control" id="lastname" placeholder="nom"
+                                        <input type="text" class="form-control" id="lastname" placeholder="lastname"
                                             name="lastname">
                                         <label for="lastname">Nom</label>
                                     </div>
@@ -286,6 +288,7 @@
                                 </div>
                                 <div class="col-12 col-md-12">
                                     <button class="btn btn-primary">Bienvenu</button>
+                                </div>
                                 </div>
                             </form>
                         </div>
