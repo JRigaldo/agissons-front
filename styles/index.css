@@ -12195,18 +12195,18 @@ h1.heading {
   background: #75cae5;
   background: linear-gradient(145deg, #75cae5 0%, #b7b099 48%, #e46e29 100%); }
 
-.section-intitative h3 {
+.block-speech h3 {
   color: var(--theme-primary);
   font-size: 1.2rem;
   line-height: 1.6rem;
   margin-top: 2rem;
   margin-bottom: 0.7rem; }
-.section-intitative ul li {
+.block-speech ul li {
   position: relative;
   margin-left: 20px; }
-  .section-intitative ul li:first-child {
+  .block-speech ul li:first-child {
     margin-top: 20px; }
-  .section-intitative ul li:before {
+  .block-speech ul li:before {
     position: absolute;
     left: -20px;
     top: 50%;
@@ -13126,6 +13126,41 @@ a.card__link {
   margin-top: 30px; }
   .card__date--footer .card__date--location {
     margin-left: 15px; }
+
+/**************   card agenda (agenda page)   ****************/
+.card__policy {
+  background-color: var(--white);
+  border-radius: 5px;
+  padding: 20px;
+  -webkit-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.3);
+  min-height: 360px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column; }
+  .card__policy h4 {
+    color: var(--gray-300);
+    font-size: 1.3rem; }
+  .card__policy h3 {
+    color: var(--theme-primary);
+    font-size: 1.3rem;
+    margin-top: 30px; }
+  .card__policy ul li a {
+    font-size: 0.9rem;
+    color: var(--gray-600);
+    margin-top: 10px; }
+
+a.link-hook {
+  padding: 10px;
+  border-radius: 25px;
+  border: 1px solid var(--gray-400);
+  display: flex; }
+  a.link-hook:hover {
+    background-color: #cccccc; }
+
+.card__policy--incrementation {
+  text-transform: uppercase;
+  margin-right: 5px; }
 
 .modal-box {
   background-color: rgba(0, 0, 0, 0.2);
