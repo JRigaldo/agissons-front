@@ -71,3 +71,11 @@ div.swiper-button-prev:after {
     display: none;
   }
 }
+
+.swiper-ad{
+  position: relative; 
+}
+
+div.swiper-horizontal>.swiper-pagination-bullets, div.swiper-pagination-bullets.swiper-pagination-horizontal, div.swiper-pagination-custom, div.swiper-pagination-fraction {
+    bottom: 42px;
+}

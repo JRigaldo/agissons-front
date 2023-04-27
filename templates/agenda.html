@@ -23,7 +23,7 @@
                 src="../images/logo-header-agissons.png" alt="logo association Agissons !"></a>
         <nav class="header__nav-links header--hidden-down">
             <ul>
-                <li><a href="#" class="active">Accueil</a></li>
+                <li><a href="#">Accueil</a></li>
                 <li><a href="#">Nos initiatives</a></li>
                 <li><a href="#">Qui sommes-nous ?</a></li>
                 <li><a href="#">Faire un don</a></li>
@@ -62,7 +62,7 @@
         <div class="mobile-menu--container">
             <nav class="mobile-menu--text">
                 <ul>
-                    <li><a href="#" class="active">Accueil</a></li>
+                    <li><a href="#">Accueil</a></li>
                     <li><a href="#">Nos initiatives</a></li>
                     <li><a href="#">Qui sommes-nous ?</a></li>
                     <li><a href="#">Faire un don</a></li>
@@ -135,7 +135,7 @@
         </div>
     </aside>
     <div class="site-cover" id="site-cover"></div>
-    <div class="wrapper">
+    <div class="wrapper mt-small-50 mt-50">
         <aside class="sticky">
             <nav class="aside-nav">
                 <ul>
@@ -144,14 +144,14 @@
                             <h5>Passez à l’action</h5>
                         </a>
                         <p>La révolution démocratique verte se construira avec vous, ou elle ne sera pas. Alors rejoignez un mouvement ouvert à toutes et tous, car ensemble, nous sommes une force immense !</p>
-                        <a href="#" class="mt-15"><button class="btn btn-accent">Deviens bénévole</button></a>
+                        <div class="flex center-center"><button><a href="#" class="btn btn-accent">Deviens bénévole</a></button></div>
                     </li>
                     <li>
                         <a href="#">
                             <h5>Faites un don</h5>
                         </a>
                         <p>AG!SSONS ne reçoit aucun financement des partis ou des grandes entreprises. S’ils ont l’argent, nous avons les gens : contribuez à notre indépendance en faisant un don.</p>
-                        <a href="#" class="mt-15"><button class="btn btn-accent">Faire un don</button></a>
+                        <div class="flex center-center"><button><a href="#" class="btn btn-accent">Faire un don</a></button></div>
                     </li>
                 </ul>
             </nav>
@@ -218,82 +218,75 @@
         </aside>
         <main>
             <section>
-                <div class="container">
-                    <h2 class="mt-small-60 mb-small-20 pt-small-20 mt-60 mb-20 pt-20">Des évènements chaque semaine pour participer au changement !</h2>
-                    <h3 class="mb-small-50 mb-50">AG!SSONS organise ou participe à de nombreux événements. Venez vous informer et nous rencontrer sur le terrain ! Vous trouverez ici toutes les dates à noter dans votre agenda. Inscrivez-vous directement sur chaque événement, afin que l’on puisse vous accueillir dans les meilleures conditions. </h3>
+                <div class="intro gradient-02 pt-small-50 pt-50 pb-small-50 pb-50">
+                    <div class="container">
+                        <h4 class="mb-small-20 mb-20">Agenda</h4>
+                        <h1>Ne rien louper grâce à l'agenda</h1>
+                    </div>
                 </div>
-                <div class="row-top pt-small-50 pb-small-100 pt-50 pb-100">
-                    <div class="col-md-3">
-                        <div class="card__agenda badge--primary">
-                            <span class="card__agenda-icon">
-                                <img src="../images/icon-edit-50x50.png" alt="edit icon">
-                            </span>
-                            <div class="card__agenda-content">
-                                <p class="card__agenda-time">Mercredi <time>17.04.2023</time><br>à notre local</p>
-                                <h5>Séance d’information</h5>
-                            </div>
-                            <div class="card__agenda-footer">
-                                <button><time>18h - 18h30</time></button>
-                                <p>
-                                    Avenue Villamont 17 <br>
-                                    1003 Lausanne
-                                </p>
-                            </div>
-                        </div>
+            </section>
+            <section class="container">
+                <div class="row-top gutter mb-small-30 mb-50">
+                    <div class="col-12 col-md-12">
+                        <h4 class="mb-small-30 mt-small-30 mt-30 mb-50 gray-title">Découvrez nos prochaines actions et événements. Venez nous rencontrer, discuter, découvrir notre projet et nos méthodes, vous engager ! Vous désirez participer à un événement ? Rejoindre une action ? Inscrivez-vous directement sur l’événement correspondant. Nous vous accueillerons volontiers et vous formerons à l’action si nécessaire.</h4>
                     </div>
-                    <div class="col-md-3">
-                        <div class="card__agenda badge--secondary">
-                            <span class="card__agenda-icon">
-                                <img src="../images/icon-time-50x50.png" alt="time icon">
-                            </span>
-                            <div class="card__agenda-content">
-                                <p class="card__agenda-time">Mercredi <time>17.04.2023</time><br>à notre local</p>
-                                <h5>Séance d’information</h5>
-                            </div>
-                            <div class="card__agenda-footer">
-                                <button><time>18h - 18h30</time></button>
-                                <p>
-                                    Avenue Villamont 17 <br>
-                                    1003 Lausanne
-                                </p>
-                            </div>
-                        </div>
+                </div>
+                
+                <div class="row-top-left gutter">
+                    <div class="col-12 col-md-12">
+                        <h3>Avril</h3>
                     </div>
-                    <div class="col-md-3">
-                        <div class="card__agenda badge--tertiary">
-                            <span class="card__agenda-icon">
-                                <img src="../images/icon-together-50x50.png" alt="together icon">
-                            </span>
-                            <div class="card__agenda-content">
-                                <p class="card__agenda-time">Mercredi <time>17.04.2023</time><br>à notre local</p>
-                                <h5>Séance d’information</h5>
+                    <div class="col-12 col-md-4">
+                        <a href="#" class="card__date active">
+                            <div class="card__date--header">
+                                <div class="card__date--date">
+                                    <span>Mercredi</span>
+                                    <span>17</span>
+                                    <span>Avril</span>
+                                </div>
+                                <svg id="info" xmlns="http://www.w3.org/2000/svg" width="37.921" height="37.921" viewBox="0 0 37.921 37.921">
+                                    <path id="Tracé_7" data-name="Tracé 7" d="M224,129.778A1.783,1.783,0,0,1,225.778,128h1.185a1.783,1.783,0,0,1,1.778,1.778v1.185a1.783,1.783,0,0,1-1.778,1.778h-1.185A1.783,1.783,0,0,1,224,130.963Z" transform="translate(-207.41 -118.52)" fill="#fff"/>
+                                    <path id="Tracé_8" data-name="Tracé 8" d="M201.48,235.85H192v-2.37h2.37v-7.11H192V224h7.11v9.48h2.37Z" transform="translate(-177.78 -207.41)" fill="#fff"/>
+                                    <path id="Tracé_9" data-name="Tracé 9" d="M18.96,0a18.96,18.96,0,1,0,18.96,18.96A18.96,18.96,0,0,0,18.96,0Zm0,34.366A15.405,15.405,0,1,1,34.366,18.96,15.405,15.405,0,0,1,18.96,34.366Z" fill="#fff"/>
+                                </svg>
                             </div>
-                            <div class="card__agenda-footer">
-                                <button><time>18h - 18h30</time></button>
-                                <p>
-                                    Avenue Villamont 17 <br>
-                                    1003 Lausanne
-                                </p>
+                            <div class="card__date--body">
+                                <h4>Séance d’information au local</h4>
+                                <div class="hours"><span class="start-time">18</span>-<span class="end-time">18</span>h<span class="seconds">30</span></div>
                             </div>
-                        </div>
+                            <div class="card__date--footer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28.016" height="44.825" viewBox="0 0 28.016 44.825">
+                                    <path id="location" d="M110.008,0A14.008,14.008,0,0,0,96,14.008c0,14.008,14.008,30.817,14.008,30.817s14.008-16.809,14.008-30.817A14.008,14.008,0,0,0,110.008,0Zm0,22.588a8.58,8.58,0,1,1,8.58-8.58A8.58,8.58,0,0,1,110.008,22.588Zm-5.428-8.58a5.428,5.428,0,1,1,5.428,5.428A5.428,5.428,0,0,1,104.58,14.008Z" transform="translate(-96)" fill="#fff"/>
+                                </svg>
+                                <span class="card__date--location">Avenue de Villamont 17</br>1003 Lausanne</span>
+                            </div>
+                        </a>
                     </div>
-                    <div class="col-md-3">
-                        <div class="card__agenda badge--quaternary">
-                            <span class="card__agenda-icon">
-                                <img src="../images/icon-bullhorn-50x50.png" alt="bullhorn icon">
-                            </span>
-                            <div class="card__agenda-content">
-                                <p class="card__agenda-time">Mercredi <time>17.04.2023</time><br>à notre local</p>
-                                <h5>Séance d’information</h5>
+                    <div class="col-12 col-md-4">
+                        <a href="#" class="card__date">
+                            <div class="card__date--header">
+                                <div class="card__date--date">
+                                    <span>Mercredi</span>
+                                    <span>17</span>
+                                    <span>Avril</span>
+                                </div>
+                                <svg id="info" xmlns="http://www.w3.org/2000/svg" width="37.921" height="37.921" viewBox="0 0 37.921 37.921">
+                                    <path id="Tracé_7" data-name="Tracé 7" d="M224,129.778A1.783,1.783,0,0,1,225.778,128h1.185a1.783,1.783,0,0,1,1.778,1.778v1.185a1.783,1.783,0,0,1-1.778,1.778h-1.185A1.783,1.783,0,0,1,224,130.963Z" transform="translate(-207.41 -118.52)" fill="#fff"/>
+                                    <path id="Tracé_8" data-name="Tracé 8" d="M201.48,235.85H192v-2.37h2.37v-7.11H192V224h7.11v9.48h2.37Z" transform="translate(-177.78 -207.41)" fill="#fff"/>
+                                    <path id="Tracé_9" data-name="Tracé 9" d="M18.96,0a18.96,18.96,0,1,0,18.96,18.96A18.96,18.96,0,0,0,18.96,0Zm0,34.366A15.405,15.405,0,1,1,34.366,18.96,15.405,15.405,0,0,1,18.96,34.366Z" fill="#fff"/>
+                                </svg>
                             </div>
-                            <div class="card__agenda-footer">
-                                <button><time>18h - 18h30</time></button>
-                                <p>
-                                    Avenue Villamont 17 <br>
-                                    1003 Lausanne
-                                </p>
+                            <div class="card__date--body">
+                                <h4>Séance d’information au local</h4>
+                                <div class="hours"><span class="start-time">18</span>-<span class="end-time">18</span>h<span class="seconds">30</span></div>
                             </div>
-                        </div>
+                            <div class="card__date--footer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28.016" height="44.825" viewBox="0 0 28.016 44.825">
+                                    <path id="location" d="M110.008,0A14.008,14.008,0,0,0,96,14.008c0,14.008,14.008,30.817,14.008,30.817s14.008-16.809,14.008-30.817A14.008,14.008,0,0,0,110.008,0Zm0,22.588a8.58,8.58,0,1,1,8.58-8.58A8.58,8.58,0,0,1,110.008,22.588Zm-5.428-8.58a5.428,5.428,0,1,1,5.428,5.428A5.428,5.428,0,0,1,104.58,14.008Z" transform="translate(-96)" fill="#fff"/>
+                                </svg>
+                                <span class="card__date--location">Avenue de Villamont 17</br>1003 Lausanne</span>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </section>
@@ -380,6 +373,7 @@
         <script src="../js/swiper.js"></script>
         <script src="../js/menu.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
         <script>
             let lazyImages = document.querySelectorAll(".lazyload");
             lazyload(lazyImages);

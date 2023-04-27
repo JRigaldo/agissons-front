@@ -351,3 +351,57 @@ a.card__link {
     color: var(--white);
   }
 }
+
+/**************   card agenda (agenda page)   ****************/
+
+.card__date{
+  background-color: var(--light-blue);
+  width: 100%;
+  min-height: 383px;
+  margin-bottom: 50px;
+  padding: 20px;
+  border-radius: 5px;
+  color: var(--gray-dark);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  svg path{
+    fill: var(--gray-dark)
+  }
+}
+
+.card__date.active{
+  background-color: var(--theme-primary);
+  color: var(--white);
+  svg path{
+    fill: var(--white)
+  }
+}
+
+.card__date--header{
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.card__date--header .card__date--date{
+  span{
+    display: block;
+    font-size: 0.8rem;
+  }
+  span:nth-child(2){
+    font-size: 3rem;
+  }
+}
+
+.card__date--footer{
+  display: flex;
+  .card__date--location{
+    margin-left: 15px;
+  }
+}
+
+
+

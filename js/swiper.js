@@ -17,7 +17,6 @@ jQuery(function ($) {
                     prevEl: '.swiper-button-prev',
                 },
             });
-            console.log(swiper);
         }
 
         var swiperAd = document.querySelector('.swiper-ad');
@@ -25,6 +24,11 @@ jQuery(function ($) {
             var swiperAd = new Swiper(swiperAd, {
                 centeredSlides: true,
                 spaceBetween: 10,
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
             });
         }
     });
