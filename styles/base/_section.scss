@@ -319,8 +319,16 @@ h1.heading {
     color: var(--theme-primary);
     font-size: 1.2rem;
     line-height: 1.6rem;
-    margin-top: 2rem;
-    margin-bottom: 0.7rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px 0;
+  }
+  h4{
+    font-size: 1rem;
+    line-height: 1.2rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px 0;
   }
   ul li{
     position: relative;
@@ -331,13 +339,18 @@ h1.heading {
     &:before{
       position: absolute;
       left: -20px;
-      top: 50%;
+      top: 10px;
       content: '';
-      transform: translateY(-50%);
       width: 10px;
       height: 3px;
       background-color: var(--gray-dark);
     }
+  }
+  p{
+    margin-top: 10px;
+  }
+  svg{
+
   }
 }
 
@@ -347,4 +360,88 @@ h1.heading {
 90deg,rgba(0,0,0,0.00) 0%,#000000 50%,rgba(0,0,0,0.00) 100%);
     opacity: .1;
     width: 100%;
+}
+
+.line-accordion{
+  display: block;
+  height: 2px;
+  width: 100%;
+  margin: 10px 0;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.accordion--title{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--gray-200);
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  transition-duration: 300ms;
+  &:hover{
+    background-color: var(--theme-primary);
+    h3{
+      color: var(--white);
+    }
+    svg path{
+      fill: var(--white);
+    }
+  }
+  .arrow:before,
+  .arrow svg path{
+    transition-duration: 300ms;
+  }
+}
+
+.accordion--subtitle{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  transition-duration: 300ms;
+  &:hover{
+    color: var(--theme-primary);
+    .arrow:before{
+      background-color: var(--theme-primary);
+    }
+    .arrow svg path{
+      fill: var(--white);
+    }
+  }
+  .arrow{
+    position: relative;
+    svg{
+      transition-duration: 300ms;
+      width: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-52%);
+    }
+    &:before{
+      content: '';
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      @include absolute-center;
+      z-index: -1;
+      background-color: var(--gray-200);
+      transition-duration: 300ms;
+    }
+  }
+}
+
+.accordion--subtitle{
+  display: none;
+}
+
+.accordion--content{
+  display: none;
+}
+
+.line-accordion{
+  display: none;
 }
