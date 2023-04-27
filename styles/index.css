@@ -11845,6 +11845,9 @@ button:focus {
 
   div.offset-lg-12 {
     margin-left: 100%; } }
+html {
+  scroll-behavior: smooth; }
+
 body {
   font-family: var(--theme-font-family);
   background-color: var(--white);
