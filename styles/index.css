@@ -13089,7 +13089,12 @@ a.card__link {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  flex-direction: column; }
+  flex-direction: column;
+  cursor: pointer; }
+  .card__date:hover {
+    background-color: #a0a6c4; }
+  .card__date.active:hover {
+    background-color: #0e3857; }
   .card__date svg path {
     fill: var(--gray-dark); }
 
@@ -13111,8 +13116,14 @@ a.card__link {
 .card__date--header .card__date--date span:nth-child(2) {
   font-size: 3rem; }
 
+.card__date--body h4 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  line-height: 1.7rem; }
+
 .card__date--footer {
-  display: flex; }
+  display: flex;
+  margin-top: 30px; }
   .card__date--footer .card__date--location {
     margin-left: 15px; }
 

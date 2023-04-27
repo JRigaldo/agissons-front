@@ -366,6 +366,13 @@ a.card__link {
   align-items: flex-start;
   justify-content: space-between;
   flex-direction: column;
+  cursor: pointer;
+  &:hover{
+    background-color: darken(#DFE1EB, 20%);
+  }
+  &.active:hover{
+    background-color: darken(#1D71AE, 20%);
+  }
   svg path{
     fill: var(--gray-dark)
   }
@@ -396,8 +403,17 @@ a.card__link {
   }
 }
 
+.card__date--body{
+  h4{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    line-height: 1.7rem;
+  }
+}
+
 .card__date--footer{
   display: flex;
+  margin-top: 30px;
   .card__date--location{
     margin-left: 15px;
   }
