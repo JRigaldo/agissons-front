@@ -333,9 +333,9 @@ h1.heading {
   ul li{
     position: relative;
     margin-left: 20px;
-    &:first-child{
+    /*&:first-child{
       margin-top: 20px;
-    }
+    }*/
     &:before{
       position: absolute;
       left: -20px;
@@ -388,6 +388,9 @@ h1.heading {
       fill: var(--white);
     }
   }
+  svg{
+    transition-duration: 300ms;
+  }
   .arrow:before,
   .arrow svg path{
     transition-duration: 300ms;
@@ -419,7 +422,7 @@ h1.heading {
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translateX(-50%) translateY(-52%);
+      transform: translateX(-50%) translateY(-52%) rotate(0);
     }
     &:before{
       content: '';
@@ -434,6 +437,30 @@ h1.heading {
   }
 }
 
+.accordion.accordion-active {
+  .accordion--content{
+     display: block;
+  }
+}
+
+.accordion.accordion-active .sub-accordion{
+  .accordion--subtitle{
+    display: flex;
+  }
+  .accordion--content{
+     display: none;
+  }
+  .line-accordion{
+    display: block;
+  }
+}
+
+.accordion.accordion-active .sub-accordion.sub-accordion-active {
+  .accordion--content{
+     display: block;
+  }
+}
+
 .accordion--subtitle{
   display: none;
 }
@@ -444,4 +471,15 @@ h1.heading {
 
 .line-accordion{
   display: none;
+}
+
+.accordion.accordion-active .accordion--title{
+  svg{
+    transform: rotate(180deg);
+  }
+}
+.sub-accordion.sub-accordion-active .accordion--subtitle{
+  svg{
+    transform: translateX(-50%) translateY(-52%) rotate(180deg);
+  }
 }

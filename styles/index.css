@@ -12210,9 +12210,10 @@ h1.heading {
   padding: 10px 0; }
 .block-speech ul li {
   position: relative;
-  margin-left: 20px; }
-  .block-speech ul li:first-child {
-    margin-top: 20px; }
+  margin-left: 20px;
+  /*&:first-child{
+    margin-top: 20px;
+  }*/ }
   .block-speech ul li:before {
     position: absolute;
     left: -20px;
@@ -12252,6 +12253,8 @@ h1.heading {
       color: var(--white); }
     .accordion--title:hover svg path {
       fill: var(--white); }
+  .accordion--title svg {
+    transition-duration: 300ms; }
   .accordion--title .arrow:before,
   .accordion--title .arrow svg path {
     transition-duration: 300ms; }
@@ -12278,7 +12281,7 @@ h1.heading {
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translateX(-50%) translateY(-52%); }
+      transform: translateX(-50%) translateY(-52%) rotate(0); }
     .accordion--subtitle .arrow:before {
       content: '';
       width: 35px;
@@ -12292,6 +12295,19 @@ h1.heading {
       background-color: var(--gray-200);
       transition-duration: 300ms; }
 
+.accordion.accordion-active .accordion--content {
+  display: block; }
+
+.accordion.accordion-active .sub-accordion .accordion--subtitle {
+  display: flex; }
+.accordion.accordion-active .sub-accordion .accordion--content {
+  display: none; }
+.accordion.accordion-active .sub-accordion .line-accordion {
+  display: block; }
+
+.accordion.accordion-active .sub-accordion.sub-accordion-active .accordion--content {
+  display: block; }
+
 .accordion--subtitle {
   display: none; }
 
@@ -12300,6 +12316,12 @@ h1.heading {
 
 .line-accordion {
   display: none; }
+
+.accordion.accordion-active .accordion--title svg {
+  transform: rotate(180deg); }
+
+.sub-accordion.sub-accordion-active .accordion--subtitle svg {
+  transform: translateX(-50%) translateY(-52%) rotate(180deg); }
 
 nav.aside-nav li {
   margin-top: 50px; }
